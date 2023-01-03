@@ -39,7 +39,15 @@ const routes = [
     name: 'numbers',
     component: () => import('../views/Numbers.vue'),
     meta: {
-      layout: main
+      layout: blank
+    }
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('../views/test.vue'),
+    meta: {
+      layout: blank
     }
   },
   {
