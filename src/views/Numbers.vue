@@ -1,12 +1,14 @@
 <script setup lang="ts">
+// IMPORTS
 import { useCounterStore } from "../stores/counter";
-import { isPrime } from "../composables/useIsPrime";
+import { useIsPrimeFunctions } from "../composables/useIsPrime";
 import { useConvert } from "../composables/useConvertBinHex";
 import { useIntervalFn } from "@vueuse/core";
 import { ref, watchEffect, onMounted, onUnmounted } from "vue";
 
 const convert = useConvert();
 const store = useCounterStore();
+const primesFunc = useIsPrimeFunctions();
 
 const { pause, resume, isActive } = useIntervalFn(() => {
   // console.log("interval is 750ms.!");
@@ -15,8 +17,8 @@ const { pause, resume, isActive } = useIntervalFn(() => {
 
 // build prime list in counter store - primes Array (temp) & primes2 Set (to local storage).
 watchEffect(() => {
-  if (isPrime(store.count)) {
-    store.primes.add(store.count);
+  if (primesFunc.isPrime(store.count)) {
+    store.primes.push(store.count);
     store.primes2.add(store.count);
     // console.log(store.primes);
   }
@@ -31,10 +33,6 @@ onMounted(() => {
 onUnmounted(() => {
   console.log("onUnmounted - removeEventLister....");
   window.removeEventListener("mousewheel", onMouseWheel);
-  // F get list of values (key in JS Set) ->
-  for (const [key, value] of store.primes2.entries()) {
-    console.log(key);
-  }
 });
 
 const deltaY = ref(0);
@@ -63,7 +61,7 @@ const refreshList = () => {
     <div
       class="hidden h-screen bg-slate-300 p-10 md:visible md:col-span-2 md:col-start-1 md:row-start-1 md:inline"
     >
-      <div v-if="store.primes.size > 0">
+      <div v-if="store.primes.length > 0">
         <span class="text-sm font-thin text-white">{{ store.primes }}</span>
       </div>
     </div>
@@ -72,7 +70,7 @@ const refreshList = () => {
     <div
       class="align-self-center h-screen bg-red-300 p-6 md:col-span-4 md:col-start-3 md:row-start-1"
     >
-      <main class="m-auto my-8 overflow-hidden rounded-md shadow-2xl">
+      <main class="m-auto my-8 overflow-hidden rounded-md pt-8 shadow-2xl">
         <!-- CONTENTS -->
         <div
           class="flex flex-col items-center justify-center font-semibold text-blue-600"
@@ -162,10 +160,10 @@ const refreshList = () => {
           </div>
           <!-- F PRIME / NOT PRIME-->
           <div
-            :class="{ highlife: isPrime(store.count) }"
+            :class="{ highlife: primesFunc.isPrime(store.count) }"
             class="bg-[rgb(59 130 246)] mt-6 rounded bg-transparent py-2 px-4 font-light text-gray-500"
           >
-            {{ isPrime(store.count) ? "prime" : "not prime" }}
+            {{ primesFunc.isPrime(store.count) ? "prime" : "not prime" }}
           </div>
           <!-- F INPUT WHEEL -->
           <div class="mt-4 rounded-full bg-green-400">
@@ -212,7 +210,24 @@ const refreshList = () => {
       class="h-screen bg-slate-300 p-10 md:col-span-2 md:col-start-7 md:row-start-1"
     >
       <div v-if="store.primes2.size > 0">
-        <span class="text-sm font-thin text-black">{{ store.primes2 }}</span>
+        <div class="mb-8 h-[80vh] rounded-t-lg bg-white py-8 px-4">
+          <div
+            class="w-full select-none resize-none border-0 bg-white px-0 text-sm text-gray-900"
+          >
+            {{ store.primes2 }}
+          </div>
+
+          <div />
+        </div>
+        <div class="flex items-center justify-between border-t px-3 py-2">
+          <!-- F RESET - SET(100)-->
+          <button
+            class="mt-8 rounded border border-gray-600 bg-transparent py-2 px-5 font-thin text-slate-700 hover:border-white hover:bg-blue-500 hover:text-white"
+            @click="primesFunc.savePrimes()"
+          >
+            save file
+          </button>
+        </div>
       </div>
     </div>
   </div>

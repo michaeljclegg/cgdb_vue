@@ -4,6 +4,6 @@ const store = useCounterStore();
 
 export const updateCounter = () => {
     useInterval(200)
-    console.log("run");
+    // console.log("run");
     return store.count
 }

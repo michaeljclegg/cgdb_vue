@@ -12,7 +12,7 @@ export const useCounterStore = defineStore
     const count = ref(0)
 
     // const primes = ref<Array<number>>([])
-    let primes = new Set<number>();
+    let primes = new Array<number>();
     let primes2 = new Set<number>();
 
     const reset = () => {
