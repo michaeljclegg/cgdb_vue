@@ -1,12 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
+// import Login from "../views/auth/Login.vue";
+// import Signup from "../views/auth/Signup.vue";
 import main from '../layouts/main.vue';
 import blank from '../layouts/blank.vue';
 import center from '../layouts/center.vue';
 
-/* import { projectAuth } from "../firebase/config";
+// import { pAuth } from "../firebase/index.js";
+
 // route guard
 
+/*
 const requireAuth = (to, from, next) => {
   let user = projectAuth.currentUser;
   if (!user) {
@@ -26,6 +29,17 @@ const routes = [
     }
     // beforeEnter: requireAuth,
   },
+  // {
+  //   path: "/signup",
+  //   name: "Signup",
+  //   component: Signup,
+
+  // },
+  // {
+  //   path: "/login",
+  //   name: "Login",
+  //   component: Login,
+  // },
   {
     path: '/about',
     name: 'about',

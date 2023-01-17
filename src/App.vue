@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+// const db = firebase.firestore();
+</script>
 
 <template>
   <component :is="$route.meta.layout || 'div'"></component>

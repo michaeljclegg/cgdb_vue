@@ -4,11 +4,6 @@ import { defineStore, acceptHMRUpdate } from 'pinia'
 export const useCounterStore = defineStore
   ('counter', () => {
 
-    if (import.meta.hot) {
-      import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot))
-    }
-
-
     const count = ref(0)
 
     // const primes = ref<Array<number>>([])
@@ -48,3 +43,6 @@ export const useCounterStore = defineStore
     return { count, doubleCount, increment, powerCount, doublePowerCount, squareCount, cubeCount, decrement, reset, get, set, primes, primes2 }
   })
 export default { useCounterStore }
+
+if (import.meta.hot)
+  import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot))
