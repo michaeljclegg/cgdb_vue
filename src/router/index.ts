@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // import Login from "../views/auth/Login.vue";
 // import Signup from "../views/auth/Signup.vue";
+import ViewAuth from "../views/auth/ViewAuth.vue";
 import main from '../layouts/main.vue';
 import blank from '../layouts/blank.vue';
 import center from '../layouts/center.vue';
@@ -28,6 +29,14 @@ const routes = [
       layout: blank
     }
     // beforeEnter: requireAuth,
+  },
+  {
+    path: "/auth",
+    name: "auth",
+    component: ViewAuth,
+    meta: {
+      layout: blank
+    }
   },
   // {
   //   path: "/signup",
@@ -76,7 +85,13 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes
+  routes,
+  linkActiveClass: "text-green-900",
+  linkExactActiveClass: 'text-red-500',
 })
 
 export default router
+
+// option to apply classes (see App.vue)
+// linkActiveClass: 'active-link',
+// linkExactActiveClass: 'exact-active-link',

@@ -1,7 +1,4 @@
-<script setup lang="ts">
-
-// const db = firebase.firestore();
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <component :is="$route.meta.layout || 'div'"></component>
@@ -18,3 +15,11 @@
   margin: 5px 10px 5px 10px;
 }
 </style>
+<!-- .active {
+  color: #42b983;
+}
+
+.exact-active-link {
+  color: #42b983;
+  font-weight: bold;
+} -->
