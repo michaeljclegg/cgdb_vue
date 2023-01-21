@@ -1,5 +1,5 @@
 import { ref } from "vue";
-import { pAuth } from "../firebase/index";
+import { auth } from "../firebase/index";
 import { signOut } from "firebase/auth";
 
 const error = ref(null);
@@ -7,7 +7,7 @@ const error = ref(null);
 const logout = async () => {
   error.value = null;
   try {
-    await signOut(pAuth);
+    await signOut(auth);
   } catch (err) {
     console.log(err.message);
     error.value = err.message;

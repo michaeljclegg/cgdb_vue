@@ -6,7 +6,7 @@ import main from '../layouts/main.vue';
 import blank from '../layouts/blank.vue';
 import center from '../layouts/center.vue';
 
-// import { pAuth } from "../firebase/index.js";
+// import { auth } from "../firebase/index.js";
 
 // route guard
 

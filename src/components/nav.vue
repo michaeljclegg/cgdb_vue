@@ -3,6 +3,8 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
+  // TODO add logout
+
   <header class="sticky top-0 bg-blue-200 shadow-lg">
     <nav
       class="container flex flex-col items-center justify-center gap-4 py-6 text-white sm:flex-row"

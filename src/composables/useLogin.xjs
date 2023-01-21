@@ -1,5 +1,5 @@
 import { ref } from "vue";
-import pAuth from "../firebase/index";
+import auth from "../firebase/index";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 const error = ref(null);
@@ -10,7 +10,7 @@ const login = async (email, password) => {
   isPending.value = true;
 
   try {
-    const res = await signInWithEmailAndPassword(pAuth, email, password);
+    const res = await signInWithEmailAndPassword(auth, email, password);
     if (!res) {
       throw new Error("Incorrect login credentials");
     }
