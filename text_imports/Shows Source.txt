@@ -1,0 +1,141 @@
+1,"PS1",1992.00,,"Group show","New York","USA",0,0,1.00,,,,,,77,,,0
+2,"Vienna Festival",1992.00,,"The Outdoor Exhibition Space, Janecek - Hof , Vienna","Vienna","Austria",1,1,1.00,,,,,,77,,,0
+3,"Kunstraum Daxer",1992.00,,"The Outdoor Exhibition Space, Munich - San Francisco","Munich","Germany",1,1,1.00,,,,,,77,,,0
+4,"Christian Nagel Gallery",1991.00,,"Printing and Framing","Cologne","Germany",1,0,1.00,,,"Galerie Christian Nagel",,,77,,,0
+5,"The Power Plant",1991.00,,"The Open Tool Shelter: A Model","Toronto","Canada",1,0,1.00,,,,,,77,,,0
+6,"Grazer Kunstverein",1991.00,,"Die Offene Bibliothek","Graz","Austria",1,0,1.00,,,,,,77,,,0
+7,"Nordanstad-Skarstedt Gallery",1990.00,,"None","Stockholm","Sweden",1,0,1.00,,,,,,77,,,0
+8,"Edition Julie Sylvester",1990.00,,"Two and Four  (a collaboration with Franz West)","New York","USA",1,0,1.00,,,,,,77,,,0
+9,"Jay Gorney Modern Art",1990.00,,"The Free Public Library","New York","USA",1,1,1.00,,,,,,77,,,0
+10,"Akira Ikeda",1990.00,,"None","Tokyo","Japan",1,0,1.00,,,,,,77,,,0
+11,"Kabinett für Aktuelle Kunst",1990.00,,"A Model for a Free Standing Outdoor Library","Bremerhaven","Germany",1,0,1.00,,,,,,77,,,0
+12,"Museum Schloß Hardenberg",1990.00,,"Corporate Landscapes","Velbert","Germany",1,1,1.00,,,,,,77,,,0
+13,"frac Aquitaine, Centre Culturel, Dax",1989.00,,"None","Dax","France",1,0,1.00,,,,,,77,,,0
+14,"Kunstverein Bremerhaven",1989.00,,"Corporate Landscapes","Bremerhaven","Germany",1,1,1.00,,,,,,77,,,0
+15,"Galerie Peter Pakesch",1989.00,,"None","Vienna","Austria",1,0,1.00,,,,,,77,,,0
+16,"Giorgio Persano",1989.00,,"None","Torino","Italy",1,0,1.00,,,,,,77,,,0
+17,"Pierre Hubert",1989.00,,"None","Geneva","Swizerland",1,0,1.00,,,,,,77,,,0
+18,"CAPC Musée d'art contemporain",1989.00,,"Portraits de groupes de 1980 á 1989","Bordeaux","France",1,1,1.00,,,,,,77,,,0
+19,"Margo Leavin",1988.00,,"None","Los Angeles","USA",1,0,1.00,,,,,,77,,,0
+20,"Würrtembergischer Kunstverein",1988.00,,"Collected Portraits","Stuttgart","Germany",1,1,1.00,,,,,,77,,,0
+21,"Galerie Hussenot",1988.00,,"None","Paris","France",1,0,1.00,,,,,,77,,,0
+22,"Achim Kubinski",1988.00,,"Landschaften und Stilleben","Stuttgart","Germany",1,0,1.00,,,,,,77,,,0
+23,"Jay Gorney Modern Art",1987.00,,"(Landscape)","New York","USA",1,0,1.00,,,,,,77,,,0
+24,"Cable Gallery",1987.00,,"Petrified Forest Estates (a collaboration with David Robbins)","New York","USA",1,0,1.00,,,,,,77,,,0
+25,"Lia Rumma",1987.00,,"None","Naples","Italy",1,0,1.00,,,,,,77,,,0
+26,"Achim Kubinski",1987.00,,"None","Stuttgart","Germany",1,1,1.00,,,,,,77,,,0
+27,"Israel Museum",1987.00,,"None","Jerusalem","Israel",1,1,1.00,,,,,,77,,,0
+28,"Jay Gorney Modern Art",1986.00,,"(with Joseph Kosuth)","New York","USA",1,0,1.00,,,,,,77,,,0
+29,"Rotterdam Art Foundation",1986.00,,"None","Rotterdam","Holland",1,0,1.00,,,,,,77,,,0
+30,"Galerie Löhrl",1985.00,,"Single, Double and Group Portraits","Mönchengladbach","Germany",1,1,1.00,,,,,,77,,,0
+31,"Achim Kubinski",1985.00,,"None","Stuttgart","Germany",1,1,1.00,,,,,,77,,,0
+32,"Cable Gallery",1985.00,,"Still Life","New York","USA",1,0,1.00,,,,,,77,,,1
+33,"Tanja Grunert",1984.00,,"None","Cologne","Germany",1,0,1.00,,,,,,77,,,0
+34,"Achim Kubinski",1984.00,,"In Erinnerung an Jim Mahoney","Stuttgart","Germany",1,0,1.00,,,,,,77,,,0
+35,"Cable Gallery",1984.00,,"Portraits-Singles, Doubles and Triples","New York","USA",1,0,1.00,,,,,,77,,,0
+36,"Eric Fabre",1984.00,,"Of Certain Men Who Ate Us","Paris","France",1,0,1.00,,,,,,77,,,0
+37,"Achim Kubinski",1983.00,,"The Disease of Reason","Stuttgart","Germany",1,0,1.00,,,,,,77,,,0
+38,"Olsen Gallery",1983.00,,"Allegories of the Stock Exchange","New York","USA",1,0,1.00,,,,,,77,,,0
+39,"Michelle Lachowsky",1982.00,,"None","Antwerp","Belgium",1,0,1.00,,,,,,77,,,0
+40,"Annina Nosei Gallery",1981.00,,"Group Portraits of Executives","New York","USA",1,0,1.00,,"Group Portraits of Executives","Annina Nosei Gallery",,,1,,,1
+41,"F.A.E. Musee d'art contemporain Pully",1992.00,,"Post Human","Lausanne","Swizerland",0,1,1.00,,,,,,77,,,0
+42,"Castello di Rivoli",1992.00,,"Post Human","Torino","Italy",0,1,1.00,,,,,,77,,,0
+43,"Deste Foundation for Contemporary Art",1993.00,,"Post Human","Athens","Greece",0,1,1.00,,,,,,77,,,0
+44,"Deichtorhallen",1993.00,,"Post Human","Hamburg","Germany",0,1,1.00,,,,,,77,,,0
+45,"Jay Gorney Modern Art",1992.00,,"Changing Group Exhibition","New York","USA",0,0,1.00,,,,,,77,,,0
+46,"Museo Del folklore",1992.00,,"Molteplici Culture","Rome","Italy",0,1,1.00,,,,,,77,,,0
+47,"Stux Gallery",1992.00,,"Clegg & Guttmann, Geoffrey James, Ange Leccia, Fischli & Weiss, Jeff Wall","New York","USA",0,0,1.00,,,,,,77,,,0
+50,"Jay Gorney Modern Art",1992.00,,"(with David Robbins and Heimo Zobenrig)","New York","USA",0,0,1.00,,,,,,77,,,0
+51,"Stephan Wirtz Gallery",1992.00,,"The Object is Bound","San Francisco","USA",0,0,1.00,,,,,,77,,,0
+52,"CAPC Musee d'art contemporain",1992.00,,"Perils et Coleres","Bordeaux","France",0,1,1.00,,,,,,77,,,0
+53,"Christian Nagel Gallery",1992.00,,"The Living Room","Cologne","Germany",0,0,1.00,,,"Galerie Christian Nagel",,,77,,"www.galerie-nagel.de/",0
+54,"Wesleyan University",1992.00,,"Multiple Exposure: The Group Portrait in Photography","Middletown","USA",0,0,1.00,,,,,,77,,,0
+55,"Santa Barbara University Museum",1992.00,,"Knowledge: Aspects of Contemporary Conceptual Art","Santa Barbara","USA",0,1,1.00,,,,,,77,,,0
+56,"North Carolina Museum of Art",1992.00,,"Knowledge: Aspects of Contemporary Conceptual Art","Raleigh","USA",0,1,1.00,,,,,,77,,,0
+57,"Castello di Rivara",1991.00,,"Projections","Torino","Italy",0,1,1.00,,,,,,77,,,0
+58,"Castello di Rivoli",1991.00,,"Sguardo di Medusa","Torino","Italy",0,1,1.00,,,,,,77,,,0
+59,"Walter Gropius Bau",1991.00,,"Metropolis","Berlin","Germany",0,1,1.00,,,,,,77,,,0
+60,"Andrea Ruggieri Gallery",1991.00,,"None","Washington","USA",0,0,1.00,,,,,,77,,,0
+61,"Film in the Cities",1991.00,,"1+1: Collaboration in Contemporary Photography","St. Paul","USA",0,0,1.00,,,,,,77,,,0
+62,"Centre Georges Pompidou",1990.00,,"Art et Publicite","Paris","France",0,1,1.00,,,,,,77,,,0
+63,"Traveling exhibition",1990.00,,"Team Spirit","?","?",0,0,1.00,,,,,,77,,,0
+64,"Nippon Convention Center",1990.00,,"Pharmakon '90","Tokyo","Japan",0,1,1.00,,,,,,77,,,0
+65,"Villa Arson",1990.00,,"le Desenchantement du Monde","Nice","France",0,1,1.00,,,,,,77,,,0
+66,"Galerie Langer Fain",1990.00,,"Les Annees 80: La Photographie","Paris","France",0,0,1.00,,,,,,77,,,0
+67,"Deste Foundation for Contemporary Art",1990.00,,"Artificial Nature","Athens","Greece",0,1,1.00,,,,,,77,,,0
+68,"Whitney Museum of American Art",1990.00,,"The (Un)Making of Nature","New York","USA",0,0,1.00,,,,,,77,,,0
+69,"Galeria Comicos",1990.00,,"Je est un autre","Lisbon","Portugal",0,1,1.00,,,,,,77,,,0
+70,"XPO Galerie",1990.00,,"The Point of View","Hamburg","Germany",0,0,1.00,,,,,,77,,,0
+71,"Lia Rumma",1990.00,,"Paesaggio","Naples","Italy",0,0,1.00,,,,,,77,,,0
+72,"Whitney Museum of American Art",1989.00,,"Image World: Art and Media Culture","New York","USA",0,1,1.00,,,,,,77,,,0
+73,"Wiener Sezession",1989.00,,"Wittgenstein: The Play of the Unsayable","Vienna","Austria",0,1,1.00,,,,,,77,,,0
+74,"Palais des Beaux-Arts",1989.00,,"Wittgenstein: The Play of the Unsayable","Brussels","Belgium",0,1,1.00,,,,,,77,,,0
+75,"Arti et Amicitiae",1989.00,,"Parallel Views","Amsterdam","Holland",0,1,1.00,,,,,,77,,,0
+76,"Studio Guenzani",1989.00,,"None","Milano","Italy",0,0,1.00,,,,,,77,,,0
+77,"Galleri Nordanstad - Skarstedt",1989.00,,"None","Stockholm","Sweden",0,0,1.00,,,,,,77,,,0
+78,"Musee d'Art Contemporain de Montreal",1989.00,,"Tenir l'Image a Distance","Montreal","Canada",0,1,1.00,,,,,,77,,,0
+79,"Galerie Bruges La Morte",1989.00,,"None","Bruges","Belgium",0,0,1.00,,,,,,77,,,0
+80,"The Aldrich Museum of Contemporary Art",1989.00,,"Selections from the Collection of Marc and Livia Straus","Ridgefield","USA",0,0,1.00,,,,,,77,,,0
+81,"National Museum of American Art",1989.00,,"The Photography of Invention: American Pictures of the 1980s","Washington","USA",0,0,1.00,,,,,,77,,,0
+82,"Annina Nosei Gallery",1981.00,,"None","New York","USA",0,0,1.00,,,,,,77,,,0
+83,"Travelling exhibition (Missouri)",1989.00,,"The Modernist Still Life Photographed","Missouri","USA",0,0,1.00,,,,,,77,,,0
+84,"Jay Gorney Modern Art",1988.00,,"None","New York","USA",0,0,1.00,,,,,,77,,,0
+85,"Tiroler Landesgalerie",1988.00,,"Locations","Innsbruck","Austria",0,0,1.00,,,,,,77,,,0
+86,"Chateau d'Orion",1988.00,,"Meltem","?","France",0,0,1.00,,,,,,77,,,0
+87,"Magasin",1988.00,,"Meltem","Grenoble","France",0,0,1.00,,,,,,77,,,0
+88,"The Ringling Museum of Art",1988.00,,"This is not a photograph","Sarasota","USA",0,0,1.00,,,,,,77,,,0
+89,"The Haggerty Museum of Art",1988.00,,"Photography on the Edge","Milwaukee","USA",0,0,1.00,,,,,,77,,,0
+90,"I.C.P.",1988.00,,"Two to Tango: Collaboration inRecent American photography","New York","USA",0,0,1.00,,,,,,77,,,0
+91,"Musee d'Art Contemporain",1988.00,,"Collection pour une Region","Bordeaux","France",0,0,1.00,,,,,,77,,,0
+92,"Centre Georges Pompidou",1988.00,,"?","Paris","France",0,0,1.00,,,,,,77,,,0
+93,"Musee St. Pierre",1988.00,,"Contemporary Photographic Portraiture","Lyon","France",0,0,1.00,,,,,,77,,,0
+94,"Padiglione d'Arte Contemporanea",1988.00,,"Presi Per Incantamento","Milan","Spain",0,1,1.00,,,,,,77,,,0
+95,"Galerie Nacht St. Stephan",1988.00,,"?","Vienna","Italy",0,0,1.00,,,,,,77,,,0
+96,"Cable Gallery",1988.00,,"Selections from the Collection of Aart de Jong","New York","USA",0,0,1.00,,,,,,77,,,0
+97,"Damon Brandt Gallery",1988.00,,"Selections from XVT","New York","USA",0,0,1.00,,,,,,77,,,0
+98,"Knight Gallery",1988.00,,"Romance","Charlotte","USA",0,0,1.00,,,,,,77,,,0
+99,"Margo Leavin Gallery",1988.00,,"Nothing Sacred","Los Angeles","USA",0,0,1.00,,,,,,77,,,0
+100,"Documenta 8 Kassel",1988.00,,"The Castle","Kassel","Germany",0,0,1.00,,,,,,77,,,0
+101,"Hoffman Borman Gallery",1988.00,,"The New Who's Who","Los Angeles","USA",0,0,1.00,,,,,,77,,,0
+102,"Annina Nosei Gallery",1988.00,,"?","New York","USA",0,0,1.00,,,,,,77,,,0
+103,"First Street Forum",1988.00,,"Beyond The Image","St. Louis","USA",0,0,1.00,,,,,,77,,,0
+104,"Whitney Museum of American Art",1988.00,,"The New Romantic Landscape","Stamford","USA",0,0,1.00,,,,,,77,,,0
+105,"Galerie Charles Cartwright",1988.00,,"?","Paris","France",0,0,1.00,,,,,,77,,,0
+106,"Jay Gorney Modern Art",1987.00,,"Art Against AIDS","New York","USA",0,0,1.00,,,,,,77,,,0
+107,"Whitney Museum of American Art",1987.00,,"Biennial Exhibition","New York","USA",1,0,1.00,,,,,,77,,,0
+108,"The New Museum of Contemporary Art",1987.00,,"Fake","New York","USA",1,0,1.00,,,,,,77,,,0
+109,"Galerie Dürr",1987.00,,"Der Reine Alltag","Munich","Germany",1,0,1.00,,,,,,77,,,0
+110,"Nexus Contemporary Arts Center",1987.00,,"Modern Art Since 1984","Atlanta","USA",0,0,1.00,,,,,,77,,,0
+111,"Galerie Bismarckstrasse",1986.00,,"(with James Casebere and Ken Lum)","Cologne","Germany",0,0,1.00,,,,,,77,,,0
+112,"Kunstverein",1986.00,,"Prospect '86","Frankfurt","Germany",0,1,1.00,,,,,,77,,,0
+113,"Queens Museum",1986.00,,"The Real Big Picture","New York","USA",0,1,1.00,,,,,,77,,,0
+114,"Castel Dell'Ovo",1986.00,,"Rooted Rhetoric","Naples","France",0,1,1.00,,,,,,77,,,0
+115,"Livet Reichard Co. Inc., and Nature Morte",1985.00,,"Infotainment","New York","USA",0,0,1.00,,,,,,77,,,0
+116,"Texas Gallery",1985.00,,"Infotainment","Houston","USA",0,0,1.00,,,,,,77,,,0
+117,"Rhona Hoffman Gallery",1985.00,,"Infotainment","Chicago","USA",0,0,1.00,,,,,,77,,,0
+118,"Vanguard Gallery",1985.00,,"Infotainment","Philadelphia","USA",0,0,1.00,,,,,,77,,,0
+119,"Aspen Art Museum",1985.00,,"?","Aspen","USA",0,0,1.00,,,,,,77,,,0
+120,"Nature Morte",1985.00,,"?","New York","USA",0,0,1.00,,,,,,77,,,0
+121,"Cologne Art Fair",1985.00,,"The Appearance of Objectivity","Cologne","Germany",0,0,1.00,,,,,,77,,,0
+122,"Philip Nelson",1985.00,,"Transient Object","Lyon","France",0,0,1.00,,,,,,77,,,0
+123,"Württenbergischer Kunstverein",1984.00,,"The Self-Portrait in Photography","Stuttgart","Germany",0,0,1.00,,,,,,77,,,0
+125,"Kunstverein in Hamburg",1993.00,,"The Open Public Library","Hamburg","Germany",1,0,1.00,,,,,,77,,,0
+126,"Kunstverein in Hamburg",1993.00,,"Back Stage","Hamburg","Germany",0,1,1.00,,,,,,77,,,0
+127,"Firminy",1993.00,,"Project Unité","Firminy","France",0,0,1.00,,,,,,77,,,0
+128,"The Jewish Museum",1993.00,,"From the Inside Out, Eight Contemporary Artists","New York","USA",0,1,1.00,,,,,,77,,,0
+131,"new Gallery",1984.00,,,"New York",,0,0,1.00,,,,,,77,,,0
+132,"Ezra and Cecile Zilkha Gallery",1992.00,,"Multiple Exposure, The Group Portrait in Photography","New York","USA",0,1,1.00,,,,,,77,,,0
+133,"Rena Bransten Gallery",1993.00,,"Gesture and Nuance: the Photographic Portrait","San Francisco","USA",0,0,1.00,,,,,,77,,,0
+134,"Christian Nagel Gallery",1994.00,,"Vérité","Cologne","Germany",1,0,1.00,,,"Galerie Christian Nagel",,,77,,"www.galerie-nagel.de/",0
+136,"The Chase Manhattan Collection",1993.00,,"Photo Play","Traveling Exhib.","Traveling Exhib.",0,1,1.00,,,,,,77,,,0
+137,"Kunstraum Lüneburg",1994.00,,"The Transformation of Data into Portraits","Lüneburg","Germany",1,0,1.00,,,,,,77,,,0
+138,"Landesmusuem Mainz",1994.00,,"The Open Public Library, Mainz","Mainz","Germany",1,0,1.00,,"Die offene Bibliothek Mainz","Landesmuseum Mainz","Mainz",,77,,,0
+139,"New School for Social Research",1995.00,,"Breaking Down the Boundaries to Life","New York","USA",1,0,2.00,"One day event","Breaking Down the Boundaries to Life","New School for Social Research","New York","USA",77,,,0
+140,"Fundação de Serralves (Museu Nacional de Arte Moderna)",1995.00,,"Noah’s Ark","Porto","Portugal",0,0,2.00,,"Noah’s Ark","Fundação de Serralves (Museu Nacional de Arte Moderna)",,"Portugal",77,"www.serralves.com",,0
+141,"American Fine Arts",1995.00,,"Mapping","New York","USA",0,0,1.00,,"Mapping","American Fine Arts","New York","USA",77,,,0
+142,"MIT List Visual Art Center",1995.00,,"The Masculine Masquerade","Cambridge","USA",0,0,1.00,,"The Masculine Masquerade","MIT List Visual Art Center","Cambridge","USA",77,,"Andrew Perchuk, Helaine Posner",0
+143,"Emi Fontana Gallery",1995.00,,"This is not a picture","Milan","Italy",0,0,1.00,,"This is not a picture","Galleria Emi Fontana","Mailand",,77,,,0
+144,"Margo Leavin Gallery",1995.00,,"Untitled Reading Room","Los Angeles","USA",0,0,1.00,,"Untitled Reading Room","Margo Leavin Gallery","Los Angeles","USA",77,,,0
+145,"Christian Nagel Gallery",1995.00,,"Editionen, Multiples, Videos","Cologne",,0,0,1.00,,"Editionen, Multiples, Videos","Galerie Christian Nagel","Köln",,77,,"www.galerie-nagel.de/",0
+146,"DG Bank",1995.00,,"The Museum of the Workplace","Frankfurt","Germany",1,1,1.00,,"The Museum of the Workplace","DG Bank","Frankfurt",,77,,,0
+147,"Venice Bienalle 46",1995.00,,"Identity and alterity, figures of the body 1895/1995","Venice","Italy",0,1,2.00,"Vérité","Identità e Alterità","XLVI Biennale di Venezia","Venedig",,77,"http://www.iniva.org/library/resource/3980","Cathrin Pichler, Jean Clair",0

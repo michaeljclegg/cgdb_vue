@@ -1,0 +1,142 @@
+ShowID,Dealer/Institute Name,Date of Show,Exact Date,Show Title,City Location,Country Location,Single,Catalogue,Dummy Field,Show_Note,Show Title German,Dealer/Institute Name G,City Location G,Country Location G,Order,Web Site,Curator,Display
+1,PS1,1992,,Group show,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+2,Vienna Festival,1992,,"The Outdoor Exhibition Space, Janecek - Hof , Vienna",Vienna,Austria,TRUE,TRUE,1,,,,,,77,,,FALSE
+3,Kunstraum Daxer,1992,,"The Outdoor Exhibition Space, Munich - San Francisco",Munich,Germany,TRUE,TRUE,1,,,,,,77,,,FALSE
+4,Christian Nagel Gallery,1991,,Printing and Framing,Cologne,Germany,TRUE,FALSE,1,,,Galerie Christian Nagel,,,77,,,FALSE
+5,The Power Plant,1991,,The Open Tool Shelter: A Model,Toronto,Canada,TRUE,FALSE,1,,,,,,77,,,FALSE
+6,Grazer Kunstverein,1991,,Die Offene Bibliothek,Graz,Austria,TRUE,FALSE,1,,,,,,77,,,FALSE
+7,Nordanstad-Skarstedt Gallery,1990,,None,Stockholm,Sweden,TRUE,FALSE,1,,,,,,77,,,FALSE
+8,Edition Julie Sylvester,1990,,Two and Four  (a collaboration with Franz West),New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+9,Jay Gorney Modern Art,1990,,The Free Public Library,New York,USA,TRUE,TRUE,1,,,,,,77,,,FALSE
+10,Akira Ikeda,1990,,None,Tokyo,Japan,TRUE,FALSE,1,,,,,,77,,,FALSE
+11,Kabinett für Aktuelle Kunst,1990,,A Model for a Free Standing Outdoor Library,Bremerhaven,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+12,Museum Schloß Hardenberg,1990,,Corporate Landscapes,Velbert,Germany,TRUE,TRUE,1,,,,,,77,,,FALSE
+13,"frac Aquitaine, Centre Culturel, Dax",1989,,None,Dax,France,TRUE,FALSE,1,,,,,,77,,,FALSE
+14,Kunstverein Bremerhaven,1989,,Corporate Landscapes,Bremerhaven,Germany,TRUE,TRUE,1,,,,,,77,,,FALSE
+15,Galerie Peter Pakesch,1989,,None,Vienna,Austria,TRUE,FALSE,1,,,,,,77,,,FALSE
+16,Giorgio Persano,1989,,None,Torino,Italy,TRUE,FALSE,1,,,,,,77,,,FALSE
+17,Pierre Hubert,1989,,None,Geneva,Swizerland,TRUE,FALSE,1,,,,,,77,,,FALSE
+18,CAPC Musée d'art contemporain,1989,,Portraits de groupes de 1980 á 1989,Bordeaux,France,TRUE,TRUE,1,,,,,,77,,,FALSE
+19,Margo Leavin,1988,,None,Los Angeles,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+20,Würrtembergischer Kunstverein,1988,,Collected Portraits,Stuttgart,Germany,TRUE,TRUE,1,,,,,,77,,,FALSE
+21,Galerie Hussenot,1988,,None,Paris,France,TRUE,FALSE,1,,,,,,77,,,FALSE
+22,Achim Kubinski,1988,,Landschaften und Stilleben,Stuttgart,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+23,Jay Gorney Modern Art,1987,,(Landscape),New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+24,Cable Gallery,1987,,Petrified Forest Estates (a collaboration with David Robbins),New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+25,Lia Rumma,1987,,None,Naples,Italy,TRUE,FALSE,1,,,,,,77,,,FALSE
+26,Achim Kubinski,1987,,None,Stuttgart,Germany,TRUE,TRUE,1,,,,,,77,,,FALSE
+27,Israel Museum,1987,,None,Jerusalem,Israel,TRUE,TRUE,1,,,,,,77,,,FALSE
+28,Jay Gorney Modern Art,1986,,(with Joseph Kosuth),New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+29,Rotterdam Art Foundation,1986,,None,Rotterdam,Holland,TRUE,FALSE,1,,,,,,77,,,FALSE
+30,Galerie Löhrl,1985,,"Single, Double and Group Portraits",Mönchengladbach,Germany,TRUE,TRUE,1,,,,,,77,,,FALSE
+31,Achim Kubinski,1985,,None,Stuttgart,Germany,TRUE,TRUE,1,,,,,,77,,,FALSE
+32,Cable Gallery,1985,,Still Life,New York,USA,TRUE,FALSE,1,,,,,,77,,,TRUE
+33,Tanja Grunert,1984,,None,Cologne,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+34,Achim Kubinski,1984,,In Erinnerung an Jim Mahoney,Stuttgart,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+35,Cable Gallery,1984,,"Portraits-Singles, Doubles and Triples",New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+36,Eric Fabre,1984,,Of Certain Men Who Ate Us,Paris,France,TRUE,FALSE,1,,,,,,77,,,FALSE
+37,Achim Kubinski,1983,,The Disease of Reason,Stuttgart,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+38,Olsen Gallery,1983,,Allegories of the Stock Exchange,New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+39,Michelle Lachowsky,1982,,None,Antwerp,Belgium,TRUE,FALSE,1,,,,,,77,,,FALSE
+40,Annina Nosei Gallery,1981,,Group Portraits of Executives,New York,USA,TRUE,FALSE,1,,Group Portraits of Executives,Annina Nosei Gallery,,,1,,,TRUE
+41,F.A.E. Musee d'art contemporain Pully,1992,,Post Human,Lausanne,Swizerland,FALSE,TRUE,1,,,,,,77,,,FALSE
+42,Castello di Rivoli,1992,,Post Human,Torino,Italy,FALSE,TRUE,1,,,,,,77,,,FALSE
+43,Deste Foundation for Contemporary Art,1993,,Post Human,Athens,Greece,FALSE,TRUE,1,,,,,,77,,,FALSE
+44,Deichtorhallen,1993,,Post Human,Hamburg,Germany,FALSE,TRUE,1,,,,,,77,,,FALSE
+45,Jay Gorney Modern Art,1992,,Changing Group Exhibition,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+46,Museo Del folklore,1992,,Molteplici Culture,Rome,Italy,FALSE,TRUE,1,,,,,,77,,,FALSE
+47,Stux Gallery,1992,,"Clegg & Guttmann, Geoffrey James, Ange Leccia, Fischli & Weiss, Jeff Wall",New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+50,Jay Gorney Modern Art,1992,,(with David Robbins and Heimo Zobenrig),New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+51,Stephan Wirtz Gallery,1992,,The Object is Bound,San Francisco,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+52,CAPC Musee d'art contemporain,1992,,Perils et Coleres,Bordeaux,France,FALSE,TRUE,1,,,,,,77,,,FALSE
+53,Christian Nagel Gallery,1992,,The Living Room,Cologne,Germany,FALSE,FALSE,1,,,Galerie Christian Nagel,,,77,,www.galerie-nagel.de/,FALSE
+54,Wesleyan University,1992,,Multiple Exposure: The Group Portrait in Photography,Middletown,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+55,Santa Barbara University Museum,1992,,Knowledge: Aspects of Contemporary Conceptual Art,Santa Barbara,USA,FALSE,TRUE,1,,,,,,77,,,FALSE
+56,North Carolina Museum of Art,1992,,Knowledge: Aspects of Contemporary Conceptual Art,Raleigh,USA,FALSE,TRUE,1,,,,,,77,,,FALSE
+57,Castello di Rivara,1991,,Projections,Torino,Italy,FALSE,TRUE,1,,,,,,77,,,FALSE
+58,Castello di Rivoli,1991,,Sguardo di Medusa,Torino,Italy,FALSE,TRUE,1,,,,,,77,,,FALSE
+59,Walter Gropius Bau,1991,,Metropolis,Berlin,Germany,FALSE,TRUE,1,,,,,,77,,,FALSE
+60,Andrea Ruggieri Gallery,1991,,None,Washington,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+61,Film in the Cities,1991,,1+1: Collaboration in Contemporary Photography,St. Paul,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+62,Centre Georges Pompidou,1990,,Art et Publicite,Paris,France,FALSE,TRUE,1,,,,,,77,,,FALSE
+63,Traveling exhibition,1990,,Team Spirit,?,?,FALSE,FALSE,1,,,,,,77,,,FALSE
+64,Nippon Convention Center,1990,,Pharmakon '90,Tokyo,Japan,FALSE,TRUE,1,,,,,,77,,,FALSE
+65,Villa Arson,1990,,le Desenchantement du Monde,Nice,France,FALSE,TRUE,1,,,,,,77,,,FALSE
+66,Galerie Langer Fain,1990,,Les Annees 80: La Photographie,Paris,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+67,Deste Foundation for Contemporary Art,1990,,Artificial Nature,Athens,Greece,FALSE,TRUE,1,,,,,,77,,,FALSE
+68,Whitney Museum of American Art,1990,,The (Un)Making of Nature,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+69,Galeria Comicos,1990,,Je est un autre,Lisbon,Portugal,FALSE,TRUE,1,,,,,,77,,,FALSE
+70,XPO Galerie,1990,,The Point of View,Hamburg,Germany,FALSE,FALSE,1,,,,,,77,,,FALSE
+71,Lia Rumma,1990,,Paesaggio,Naples,Italy,FALSE,FALSE,1,,,,,,77,,,FALSE
+72,Whitney Museum of American Art,1989,,Image World: Art and Media Culture,New York,USA,FALSE,TRUE,1,,,,,,77,,,FALSE
+73,Wiener Sezession,1989,,Wittgenstein: The Play of the Unsayable,Vienna,Austria,FALSE,TRUE,1,,,,,,77,,,FALSE
+74,Palais des Beaux-Arts,1989,,Wittgenstein: The Play of the Unsayable,Brussels,Belgium,FALSE,TRUE,1,,,,,,77,,,FALSE
+75,Arti et Amicitiae,1989,,Parallel Views,Amsterdam,Holland,FALSE,TRUE,1,,,,,,77,,,FALSE
+76,Studio Guenzani,1989,,None,Milano,Italy,FALSE,FALSE,1,,,,,,77,,,FALSE
+77,Galleri Nordanstad - Skarstedt,1989,,None,Stockholm,Sweden,FALSE,FALSE,1,,,,,,77,,,FALSE
+78,Musee d'Art Contemporain de Montreal,1989,,Tenir l'Image a Distance,Montreal,Canada,FALSE,TRUE,1,,,,,,77,,,FALSE
+79,Galerie Bruges La Morte,1989,,None,Bruges,Belgium,FALSE,FALSE,1,,,,,,77,,,FALSE
+80,The Aldrich Museum of Contemporary Art,1989,,Selections from the Collection of Marc and Livia Straus,Ridgefield,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+81,National Museum of American Art,1989,,The Photography of Invention: American Pictures of the 1980s,Washington,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+82,Annina Nosei Gallery,1981,,None,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+83,Travelling exhibition (Missouri),1989,,The Modernist Still Life Photographed,Missouri,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+84,Jay Gorney Modern Art,1988,,None,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+85,Tiroler Landesgalerie,1988,,Locations,Innsbruck,Austria,FALSE,FALSE,1,,,,,,77,,,FALSE
+86,Chateau d'Orion,1988,,Meltem,?,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+87,Magasin,1988,,Meltem,Grenoble,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+88,The Ringling Museum of Art,1988,,This is not a photograph,Sarasota,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+89,The Haggerty Museum of Art,1988,,Photography on the Edge,Milwaukee,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+90,I.C.P.,1988,,Two to Tango: Collaboration inRecent American photography,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+91,Musee d'Art Contemporain,1988,,Collection pour une Region,Bordeaux,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+92,Centre Georges Pompidou,1988,,?,Paris,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+93,Musee St. Pierre,1988,,Contemporary Photographic Portraiture,Lyon,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+94,Padiglione d'Arte Contemporanea,1988,,Presi Per Incantamento,Milan,Spain,FALSE,TRUE,1,,,,,,77,,,FALSE
+95,Galerie Nacht St. Stephan,1988,,?,Vienna,Italy,FALSE,FALSE,1,,,,,,77,,,FALSE
+96,Cable Gallery,1988,,Selections from the Collection of Aart de Jong,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+97,Damon Brandt Gallery,1988,,Selections from XVT,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+98,Knight Gallery,1988,,Romance,Charlotte,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+99,Margo Leavin Gallery,1988,,Nothing Sacred,Los Angeles,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+100,Documenta 8 Kassel,1988,,The Castle,Kassel,Germany,FALSE,FALSE,1,,,,,,77,,,FALSE
+101,Hoffman Borman Gallery,1988,,The New Who's Who,Los Angeles,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+102,Annina Nosei Gallery,1988,,?,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+103,First Street Forum,1988,,Beyond The Image,St. Louis,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+104,Whitney Museum of American Art,1988,,The New Romantic Landscape,Stamford,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+105,Galerie Charles Cartwright,1988,,?,Paris,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+106,Jay Gorney Modern Art,1987,,Art Against AIDS,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+107,Whitney Museum of American Art,1987,,Biennial Exhibition,New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+108,The New Museum of Contemporary Art,1987,,Fake,New York,USA,TRUE,FALSE,1,,,,,,77,,,FALSE
+109,Galerie Dürr,1987,,Der Reine Alltag,Munich,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+110,Nexus Contemporary Arts Center,1987,,Modern Art Since 1984,Atlanta,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+111,Galerie Bismarckstrasse,1986,,(with James Casebere and Ken Lum),Cologne,Germany,FALSE,FALSE,1,,,,,,77,,,FALSE
+112,Kunstverein,1986,,Prospect '86,Frankfurt,Germany,FALSE,TRUE,1,,,,,,77,,,FALSE
+113,Queens Museum,1986,,The Real Big Picture,New York,USA,FALSE,TRUE,1,,,,,,77,,,FALSE
+114,Castel Dell'Ovo,1986,,Rooted Rhetoric,Naples,France,FALSE,TRUE,1,,,,,,77,,,FALSE
+115,"Livet Reichard Co. Inc., and Nature Morte",1985,,Infotainment,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+116,Texas Gallery,1985,,Infotainment,Houston,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+117,Rhona Hoffman Gallery,1985,,Infotainment,Chicago,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+118,Vanguard Gallery,1985,,Infotainment,Philadelphia,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+119,Aspen Art Museum,1985,,?,Aspen,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+120,Nature Morte,1985,,?,New York,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+121,Cologne Art Fair,1985,,The Appearance of Objectivity,Cologne,Germany,FALSE,FALSE,1,,,,,,77,,,FALSE
+122,Philip Nelson,1985,,Transient Object,Lyon,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+123,Württenbergischer Kunstverein,1984,,The Self-Portrait in Photography,Stuttgart,Germany,FALSE,FALSE,1,,,,,,77,,,FALSE
+125,Kunstverein in Hamburg,1993,,The Open Public Library,Hamburg,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+126,Kunstverein in Hamburg,1993,,Back Stage,Hamburg,Germany,FALSE,TRUE,1,,,,,,77,,,FALSE
+127,Firminy,1993,,Project Unité,Firminy,France,FALSE,FALSE,1,,,,,,77,,,FALSE
+128,The Jewish Museum,1993,,"From the Inside Out, Eight Contemporary Artists",New York,USA,FALSE,TRUE,1,,,,,,77,,,FALSE
+131,new Gallery,1984,,,New York,,FALSE,FALSE,1,,,,,,77,,,FALSE
+132,Ezra and Cecile Zilkha Gallery,1992,,"Multiple Exposure, The Group Portrait in Photography",New York,USA,FALSE,TRUE,1,,,,,,77,,,FALSE
+133,Rena Bransten Gallery,1993,,Gesture and Nuance: the Photographic Portrait,San Francisco,USA,FALSE,FALSE,1,,,,,,77,,,FALSE
+134,Christian Nagel Gallery,1994,,Vérité,Cologne,Germany,TRUE,FALSE,1,,,Galerie Christian Nagel,,,77,,www.galerie-nagel.de/,FALSE
+136,The Chase Manhattan Collection,1993,,Photo Play,Traveling Exhib.,Traveling Exhib.,FALSE,TRUE,1,,,,,,77,,,FALSE
+137,Kunstraum Lüneburg,1994,,The Transformation of Data into Portraits,Lüneburg,Germany,TRUE,FALSE,1,,,,,,77,,,FALSE
+138,Landesmusuem Mainz,1994,,"The Open Public Library, Mainz",Mainz,Germany,TRUE,FALSE,1,,Die offene Bibliothek Mainz,Landesmuseum Mainz,Mainz,,77,,,FALSE
+139,New School for Social Research,1995,,Breaking Down the Boundaries to Life,New York,USA,TRUE,FALSE,2,One day event,Breaking Down the Boundaries to Life,New School for Social Research,New York,USA,77,,,FALSE
+140,Fundação de Serralves (Museu Nacional de Arte Moderna),1995,,Noah’s Ark,Porto,Portugal,FALSE,FALSE,2,,Noah’s Ark,Fundação de Serralves (Museu Nacional de Arte Moderna),,Portugal,77,www.serralves.com,,FALSE
+141,American Fine Arts,1995,,Mapping,New York,USA,FALSE,FALSE,1,,Mapping,American Fine Arts,New York,USA,77,,,FALSE
+142,MIT List Visual Art Center,1995,,The Masculine Masquerade,Cambridge,USA,FALSE,FALSE,1,,The Masculine Masquerade,MIT List Visual Art Center,Cambridge,USA,77,,"Andrew Perchuk, Helaine Posner",FALSE
+143,Emi Fontana Gallery,1995,,This is not a picture,Milan,Italy,FALSE,FALSE,1,,This is not a picture,Galleria Emi Fontana,Mailand,,77,,,FALSE
+144,Margo Leavin Gallery,1995,,Untitled Reading Room,Los Angeles,USA,FALSE,FALSE,1,,Untitled Reading Room,Margo Leavin Gallery,Los Angeles,USA,77,,,FALSE
+145,Christian Nagel Gallery,1995,,"Editionen, Multiples, Videos",Cologne,,FALSE,FALSE,1,,"Editionen, Multiples, Videos",Galerie Christian Nagel,Köln,,77,,www.galerie-nagel.de/,FALSE
+146,DG Bank,1995,,The Museum of the Workplace,Frankfurt,Germany,TRUE,TRUE,1,,The Museum of the Workplace,DG Bank,Frankfurt,,77,,,FALSE
+147,Venice Bienalle 46,1995,,"Identity and alterity, figures of the body 1895/1995",Venice,Italy,FALSE,TRUE,2,Vérité,Identità e Alterità,XLVI Biennale di Venezia,Venedig,,77,http://www.iniva.org/library/resource/3980,"Cathrin Pichler, Jean Clair",FALSE

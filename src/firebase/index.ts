@@ -37,4 +37,5 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+
 export default { db, storage };

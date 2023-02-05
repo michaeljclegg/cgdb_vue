@@ -1,0 +1,6 @@
+1,"Portrait",
+2,"Still Life",
+3,"Landscape",
+4,"Project",
+5,"Other",
+6,"Open",

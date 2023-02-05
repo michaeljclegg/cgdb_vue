@@ -1,0 +1,97 @@
+[
+ {
+  "InternalID": 1,
+  "TypeID": 1,
+  "SubTypeName": "ADULT (MALE)"
+ },
+ {
+  "InternalID": 2,
+  "TypeID": 1,
+  "SubTypeName": "ADULT (FEMALE)"
+ },
+ {
+  "InternalID": 3,
+  "TypeID": 1,
+  "SubTypeName": "CHILD(MALE)"
+ },
+ {
+  "InternalID": 4,
+  "TypeID": 1,
+  "SubTypeName": "CHILD(FEMALE)"
+ },
+ {
+  "InternalID": 5,
+  "TypeID": 2,
+  "SubTypeName": "COUPLE"
+ },
+ {
+  "InternalID": 6,
+  "TypeID": 2,
+  "SubTypeName": "TWO ADULTS OF THE SAME SEX"
+ },
+ {
+  "InternalID": 7,
+  "TypeID": 2,
+  "SubTypeName": "PARENT AND CHILD"
+ },
+ {
+  "InternalID": 8,
+  "TypeID": 2,
+  "SubTypeName": "TWO CHILDREN"
+ },
+ {
+  "InternalID": 9,
+  "TypeID": 3,
+  "SubTypeName": "ADULT GROUP (MALE)"
+ },
+ {
+  "InternalID": 10,
+  "TypeID": 3,
+  "SubTypeName": "ADULT GROUP (FEMALE)"
+ },
+ {
+  "InternalID": 11,
+  "TypeID": 3,
+  "SubTypeName": "ADULT GROUP (MIXED SEX)"
+ },
+ {
+  "InternalID": 12,
+  "TypeID": 3,
+  "SubTypeName": "PARENTS AND CHILD"
+ },
+ {
+  "InternalID": 13,
+  "TypeID": 3,
+  "SubTypeName": "A PARENT AND TWO CHILDREN"
+ },
+ {
+  "InternalID": 14,
+  "TypeID": 4,
+  "SubTypeName": "ADULT GROUP (MALE)"
+ },
+ {
+  "InternalID": 15,
+  "TypeID": 4,
+  "SubTypeName": "ADULT GROUP (FEMALE)"
+ },
+ {
+  "InternalID": 16,
+  "TypeID": 4,
+  "SubTypeName": "ADULT GROUP (MIXED SEX)"
+ },
+ {
+  "InternalID": 17,
+  "TypeID": 4,
+  "SubTypeName": "FAMILY (ONE PARENT)"
+ },
+ {
+  "InternalID": 18,
+  "TypeID": 4,
+  "SubTypeName": "FAMILY (TWO PARENTS)"
+ },
+ {
+  "InternalID": 19,
+  "TypeID": 4,
+  "SubTypeName": "CHILDREN"
+ }
+]
