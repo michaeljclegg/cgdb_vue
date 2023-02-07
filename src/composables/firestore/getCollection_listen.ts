@@ -22,7 +22,7 @@ const getCollection = (col: string, xquery: string) => {
     colRef = query(collection(db, col), where("cityShoot", "==", xquery), orderBy("index", "asc"))
     //! note the 25 limit parameter...
   } else {
-    colRef = query(collection(db, col), orderBy("index", "asc"), limit(40));
+    colRef = query(collection(db, col), orderBy("index", "asc"), limit(25));
   }
 
   console.log(colRef);

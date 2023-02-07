@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import Login from "../views/auth/Login.vue";
-// import Signup from "../views/auth/Signup.vue";
+
 import ViewAuth from "../views/auth/ViewAuth.vue";
+import inputForm from "../views/inputForm.vue";
 import main from '../layouts/main.vue';
 import blank from '../layouts/blank.vue';
 import center from '../layouts/center.vue';
@@ -38,17 +38,14 @@ const routes = [
       layout: blank
     }
   },
-  // {
-  //   path: "/signup",
-  //   name: "Signup",
-  //   component: Signup,
-
-  // },
-  // {
-  //   path: "/login",
-  //   name: "Login",
-  //   component: Login,
-  // },
+  {
+    path: "/input",
+    name: "input",
+    component: inputForm,
+    meta: {
+      layout: blank
+    }
+  },
   {
     path: '/about',
     name: 'about',
