@@ -1,4 +1,0 @@
-1,"Oil Paint","Mixed Pigment","Slow Drying, May Crack in time",,$30.00,
-2,"Gouache","Opaque Watercolor mixed with Gum","Quick on the dry",,$20.00,
-3,"Canvas","Cotton wide weave","Durable, time tested","1",$10.00,"1"
-4,"Type C Print","Photographic Paper","Prints made from photographic negative",,$25.00,

@@ -17,7 +17,7 @@ function buttonClose() {
     <div class="h-full w-full max-w-2xl p-4 md:h-auto">
       <!-- Modal content -->
       <div
-        class="relative rounded-lg bg-white p-4 shadow dark:bg-gray-800 sm:p-5"
+        class="rounded-lg border-2 border-solid border-gray-100 bg-white p-4 drop-shadow-xl dark:bg-gray-800 sm:p-5"
       >
         <!-- Modal header -->
         <div
@@ -66,20 +66,25 @@ function buttonClose() {
                 placeholder="Ex. Apple iMac 27&ldquo;"
               />
             </div>
-            <div>
+            <!-- //! Gener -->
+            <div
+              class="sm:col-start-3 sm:col-end-4 sm:row-start-2 sm:row-end-3"
+            >
               <label
-                for="brand"
+                for="category"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >date</label
+                >gener</label
               >
-              <input
-                type="text"
-                name="brand"
-                id="brand"
-                value="Google"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="Ex. Apple"
-              />
+              <select
+                id="category"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+              >
+                <option selected="">portrait</option>
+                <option value="Portrait">portrait</option>
+                <option value="Still Live">still life</option>
+                <option value="Landscape">landscape</option>
+                <option value="Other">other</option>
+              </select>
             </div>
             <div>
               <label

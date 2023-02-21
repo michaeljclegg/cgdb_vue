@@ -9,7 +9,7 @@ function buttonClose() {
   <!-- Main modal -->
 
   <div
-    id="form3"
+    id="form4"
     tabindex="-1"
     aria-hidden="true"
     class="flex w-full items-center justify-center overflow-y-auto overflow-x-hidden md:h-full"
@@ -17,7 +17,7 @@ function buttonClose() {
     <div class="h-full w-full max-w-2xl p-4 md:h-auto">
       <!-- Modal content -->
       <div
-        class="relative rounded-lg bg-white p-4 shadow dark:bg-gray-800 sm:p-5"
+        class="rounded-lg border-2 border-solid border-gray-100 bg-white p-4 drop-shadow-xl dark:bg-gray-800 sm:p-5"
       >
         <!-- Modal header -->
         <div
@@ -58,9 +58,7 @@ function buttonClose() {
                 />
                 <figcaption
                   class="mt-2 text-center text-sm text-gray-500 dark:text-gray-400"
-                >
-                  The Cigar Eaters, 1983
-                </figcaption>
+                ></figcaption>
               </figure>
             </div>
           </div>

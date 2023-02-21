@@ -16,7 +16,9 @@ function buttonClose() {
   >
     <div class="p h-full w-full max-w-2xl p-4 md:h-auto">
       <!-- Modal content -->
-      <div class="rounded-lg bg-white p-4 shadow dark:bg-gray-800 sm:p-5">
+      <div
+        class="rounded-lg border-2 border-solid border-gray-100 bg-white p-4 drop-shadow-xl dark:bg-gray-800 sm:p-5"
+      >
         <!-- Modal header -->
         <div
           class="mb-4 flex items-center justify-between rounded-t border-b pb-4 dark:border-gray-600 sm:mb-5"

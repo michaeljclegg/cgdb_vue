@@ -62,8 +62,6 @@ const closeSubForm4 = () => (showImage.value = false);
 
 <template>
   <!-- Modal toggle -->
-  <p class="mt-2 text-4xl text-red-800">artworks</p>
-
   <!-- //! buttons -->
   <div class="my-5 flex justify-center">
     <!--  artwork -->
@@ -100,6 +98,9 @@ const closeSubForm4 = () => (showImage.value = false);
       image
     </button>
   </div>
+  <p class="text-1xl mt-2 text-red-800">
+    The Single Executive Portrait Series #1..
+  </p>
   <!-- <pre>{{ showArtwork }}</pre> -->
   <!-- Main modals -->
   <div v-if="showArtwork" class="mt-6">
