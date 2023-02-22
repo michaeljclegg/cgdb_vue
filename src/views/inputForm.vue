@@ -62,7 +62,7 @@ const closeSubForm4 = () => (showImage.value = false);
 
 <template>
   <!-- Modal toggle -->
-  <!-- //! buttons -->
+  <!-- //! Nevigation buttons (artwork - prints - details - image)-->
   <div class="my-5 flex justify-center">
     <!--  artwork -->
     <button
@@ -101,18 +101,17 @@ const closeSubForm4 = () => (showImage.value = false);
   <p class="text-1xl mt-2 text-red-800">
     The Single Executive Portrait Series #1..
   </p>
-  <!-- <pre>{{ showArtwork }}</pre> -->
-  <!-- Main modals -->
-  <div v-if="showArtwork" class="mt-6">
+  <!-- modals -->
+  <div v-if="showArtwork" class="mt-1">
     <form1 @closeImage="closeSubForm" />
   </div>
-  <div v-if="showPrints" class="mt-6">
+  <div v-if="showPrints" class="mt-1">
     <form2 @closeImage="closeSubForm2" />
   </div>
-  <div v-if="showDetails" class="mt-6">
+  <div v-if="showDetails" class="mt-1">
     <form3 @closeImage="closeSubForm3" />
   </div>
-  <div v-if="showImage" class="mt-6">
+  <div v-if="showImage" class="mt-1">
     <form4 @closeImage="closeSubForm4" />
   </div>
 </template>

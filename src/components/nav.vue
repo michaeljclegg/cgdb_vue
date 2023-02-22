@@ -3,8 +3,6 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  // TODO add logout
-
   <header class="sticky top-0 bg-blue-200 shadow-lg">
     <nav
       class="container flex flex-col items-center justify-center gap-4 py-6 text-white sm:flex-row"
@@ -15,18 +13,15 @@ import { RouterLink } from "vue-router";
       <RouterLink :to="{ name: 'about' }">
         <div class="flex items-center gap-3 text-[20px]">about</div>
       </RouterLink>
-      <RouterLink :to="{ name: 'numbers' }">
-        <div class="flex items-center gap-3 text-[20px]">numbers</div>
-      </RouterLink>
       <RouterLink
         :to="{ name: 'input' }"
         class="flex items-center gap-3 text-[20px]"
-        >artwork input</RouterLink
+        >input</RouterLink
       >
       <RouterLink
         :to="{ name: 'test' }"
         class="flex items-center gap-3 text-[20px]"
-        >view artworks</RouterLink
+        >artworks</RouterLink
       >
     </nav>
   </header>

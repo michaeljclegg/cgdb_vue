@@ -6,9 +6,8 @@ import { RouterView } from "vue-router";
 <template>
   <Nav />
   <div
-    class="m-auto mt-4 h-[90%] w-[80%] border border-black bg-red-400 md:w-[40%]"
+    class="m-auto mt-4 h-[75%] w-[80%] border border-black bg-gray-300 md:w-[40%]"
   >
-    <p class="mt-2 font-light text-red-500">main layout</p>
     <RouterView />
   </div>
 </template>
