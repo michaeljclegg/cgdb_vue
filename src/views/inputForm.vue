@@ -114,4 +114,59 @@ const closeSubForm4 = () => (showImage.value = false);
   <div v-if="showImage" class="mt-1">
     <form4 @closeImage="closeSubForm4" />
   </div>
+  <!-- //! pagination (out of body)-->
+  <nav aria-label="Page navigation example">
+    <ul class="mt-2 inline-flex -space-x-px">
+      <li>
+        <a
+          href="#"
+          class="ml-0 rounded-l-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >Previous</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >1</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >2</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          aria-current="page"
+          class="border border-gray-300 bg-blue-50 px-3 py-2 text-blue-600 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+          >3</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >4</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >5</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="rounded-r-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >Next</a
+        >
+      </li>
+    </ul>
+  </nav>
 </template>
