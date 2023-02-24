@@ -20,11 +20,9 @@ function buttonClose() {
         <form action="#">
           <!-- //! grid -->
           <div class="mb-4 grid gap-x-4 gap-y-3 sm:grid-cols-12">
-            <!--//! Thumbnail -->
-
             <!-- //! material -->
             <div
-              class="sm:col-start-9 sm:col-end-11 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-2"
             >
               <label
                 for="material"
@@ -36,15 +34,14 @@ function buttonClose() {
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
                 <option selected="">Cibachrome</option>
-                <option value="dollar">C-Print</option>
+                <option value="dollar">Type C-Print</option>
                 <option value="pound">Digital</option>
                 <option value="other">Other</option>
               </select>
             </div>
-
             <!-- //! mounting -->
             <div
-              class="sm:col-start-9 sm:col-end-11 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-1 sm:col-end-4 sm:row-start-2 sm:row-end-3"
             >
               <label
                 for="mounting"
@@ -61,27 +58,9 @@ function buttonClose() {
                 <option value="other">Unmounted</option>
               </select>
             </div>
-            <!-- //! Laminated - radio button  -->
-            <div
-              class="sm:col-start-11 sm:col-end-12 sm:row-start-4 sm:row-end-5"
-            >
-              <label
-                for="radio-2"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >laminated</label
-              >
-              <input
-                checked
-                id="radio-2"
-                type="radio"
-                value="false"
-                name="radio2"
-                class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
-              />
-            </div>
             <!-- //! framed - radio button  -->
             <div
-              class="sm:col-start-11 sm:col-end-12 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-5 sm:col-end-6 sm:row-start-1 sm:row-end-2"
             >
               <label
                 for="radio-2"
@@ -97,50 +76,106 @@ function buttonClose() {
                 class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
               />
             </div>
+            <!-- //! Laminated - radio button  -->
+            <div
+              class="sm:col-start-5 sm:col-end-6 sm:row-start-2 sm:row-end-3"
+            >
+              <label
+                for="radio-2"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >laminated</label
+              >
+              <input
+                checked
+                id="radio-2"
+                type="radio"
+                value="false"
+                name="radio2"
+                class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+              />
+            </div>
             <!-- //! condition -->
             <div
-              class="sm:col-start-9 sm:col-end-11 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-1 sm:col-end-4 sm:row-start-3 sm:row-end-4"
             >
               <label
                 for="condition"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >currency</label
+                >condition</label
               >
               <select
                 id="condition"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
-                <option selected="">good</option>
-                <option value="dollar">mediocre</option>
-                <option value="pound">poor</option>
-                <option value="other">damaged</option>
+                <option selected="good">good</option>
+                <option value="mediocre">mediocre</option>
+                <option value="poor">poor</option>
+                <option value="damaged">damaged</option>
               </select>
             </div>
 
-            <!-- //! Year date -->
+            <!-- //! number of sitters -->
             <div
-              class="sm:col-start-1 sm:col-end-3 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-5 sm:col-end-6 sm:row-start-3 sm:row-end-4"
+            >
+              <label
+                for="variations"
+                class="input_num mb-2 block text-center text-sm font-medium text-gray-900 dark:text-white"
+                >sitters</label
+              >
+              <input
+                type="number"
+                value="1"
+                min="1"
+                max="20"
+                name="film_num"
+                id="film_num"
+                class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="1"
+              />
+            </div>
+            <!-- //! location city -->
+            <div
+              class="sm:col-start-1 sm:col-end-4 sm:row-start-4 sm:row-end-5"
             >
               <label
                 for="year"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >year</label
+                >location city</label
               >
               <input
-                type="number"
+                type="text"
                 name="year"
                 id="year"
                 value=""
-                min="1980"
-                max="2077"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="New York"
+              />
+            </div>
+            <!-- //! panels -->
+            <div
+              class="sm:col-start-5 sm:col-end-6 sm:row-start-4 sm:row-end-5"
+            >
+              <label
+                for="variations"
+                class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >panels</label
+              >
+              <input
+                type="number"
+                value="1"
+                min="1"
+                max="8"
+                name="panels"
+                id="panels"
                 class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="1980"
+                placeholder="1"
               />
             </div>
 
             <!-- //! Gener -->
             <div
-              class="sm:col-start-3 sm:col-end-5 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-9 sm:col-end-12 sm:row-start-1 sm:row-end-2"
             >
               <label
                 for="gener"
@@ -158,181 +193,78 @@ function buttonClose() {
                 <option value="Other">other</option>
               </select>
             </div>
-
-            <!-- //! variations -->
+            <!-- //! category -->
             <div
-              class="sm:col-start-5 sm:col-end-6 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-9 sm:col-end-12 sm:row-start-2 sm:row-end-3"
             >
               <label
-                for="variations"
-                class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >variations</label
-              >
-              <input
-                type="number"
-                value="1"
-                min="1"
-                max="3"
-                name="variations"
-                id="variations"
-                class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="1"
-              />
-            </div>
-
-            <!-- //! price -->
-            <div
-              class="sm:col-start-7 sm:col-end-9 sm:row-start-4 sm:row-end-5"
-            >
-              <label
-                for="price"
+                for="category"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >price</label
-              >
-              <input
-                type="number"
-                value=""
-                name="price"
-                id="price"
-                class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="20,000"
-              />
-            </div>
-
-            <!-- //! Currency -->
-            <div
-              class="sm:col-start-9 sm:col-end-11 sm:row-start-4 sm:row-end-5"
-            >
-              <label
-                for="currency"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >currency</label
+                >category</label
               >
               <select
-                id="currency"
+                id="category"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
-                <option selected="">€ euro</option>
-                <option value="dollar">$ dollar</option>
-                <option value="pound">£ pound</option>
-                <option value="other">₪ other</option>
+                <option selected="fictional">fictional</option>
+                <option value="commissioned">commissioned</option>
+                <option value="rejected">rejected</option>
+                <option value="collaboration">collaboration</option>
               </select>
             </div>
+            <!-- //! type -->
+            <div
+              class="sm:col-start-9 sm:col-end-12 sm:row-start-3 sm:row-end-4"
+            >
+              <label
+                for="type"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >type</label
+              >
+              <select
+                id="type"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+              >
+                <option selected="single portrait">single portrait</option>
+                <option value="double portrait">double portrait</option>
+                <option value="triple portrait">triple portrait</option>
+                <option value="group portrait">group portrait</option>
+              </select>
+            </div>
+            <!-- //! sub type -->
+            <div
+              class="sm:col-start-9 sm:col-end-12 sm:row-start-4 sm:row-end-5"
+            >
+              <label
+                for="sub type"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >sub type</label
+              >
+              <select
+                id="sub type"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+              >
+                <option selected="adult male">adult male</option>
 
-            <!-- //! sold - radio button  -->
-            <div
-              class="sm:col-start-11 sm:col-end-12 sm:row-start-4 sm:row-end-5"
-            >
-              <label
-                for="radio-2"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >sold</label
-              >
-              <input
-                checked
-                id="radio-2"
-                type="radio"
-                value="false"
-                name="radio2"
-                class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
-              />
+                <option value="adult female">adult female</option>
+                <option value="child male">child male</option>
+                <option value="child female">child female</option>
+                <option value="couple male female">couple male female</option>
+                <option value="couple same sex">couple same sex</option>
+                <option value="parent and child">parent and child</option>
+                <option value="adult group male">adult group male</option>
+                <option value="adult group female">adult group female</option>
+                <option value="adult group mixed">adult group mixed</option>
+                <option value="family one parent">family one parent</option>
+                <option value="Othfamily one two parentser">
+                  family one two parents
+                </option>
+                <option value="children">children</option>
+              </select>
             </div>
-
-            <!-- //! Width -->
-            <div
-              class="sm:col-start-1 sm:col-end-3 sm:row-start-6 sm:row-end-7"
-            >
-              <label
-                for="width"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >width</label
-              >
-              <input
-                type="number"
-                name="width"
-                id="width"
-                value=""
-                class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="120"
-              />
-            </div>
-            <!-- //! Height -->
-            <div
-              class="sm:col-start-3 sm:col-end-5 sm:row-start-6 sm:row-end-7"
-            >
-              <label
-                for="height"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >height</label
-              >
-              <input
-                type="number"
-                name="height"
-                id="height"
-                value=""
-                class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="170"
-              />
-            </div>
-            <!-- //! Depth -->
-            <div
-              class="sm:col-start-5 sm:col-end-7 sm:row-start-6 sm:row-end-7"
-            >
-              <label
-                for="depth"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >depth</label
-              >
-              <input
-                type="number"
-                value=""
-                name="depth"
-                id="depth"
-                class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="20"
-              />
-            </div>
-
-            <!-- //! Location city-->
-            <div
-              class="sm:col-start-7 sm:col-end-10 sm:row-start-6 sm:row-end-7"
-            >
-              <label
-                for="city"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >city</label
-              >
-              <input
-                type="text"
-                value=""
-                name="city"
-                id="city"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="New York"
-              />
-            </div>
-            <!-- //! Location country  -->
-            <div
-              class="sm:col-start-10 sm:col-end-13 sm:row-start-6 sm:row-end-7"
-            >
-              <label
-                for="location"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >country</label
-              >
-              <input
-                type="text"
-                value=""
-                name="country"
-                id="country"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="USA"
-              />
-            </div>
-
             <!-- //! Notes  -->
             <div
-              class="sm:row-end-9 sm:col-start-1 sm:col-end-13 sm:row-start-7"
+              class="sm:row-end-9 sm:row-start-8 sm:col-start-1 sm:col-end-12"
             >
               <label
                 for="description"
@@ -341,7 +273,7 @@ function buttonClose() {
               >
               <textarea
                 id="description"
-                rows="5"
+                rows="4"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="Write a description..."
               >
@@ -403,7 +335,7 @@ function buttonClose() {
   </div>
 </template>
 
-<style scoped>
+<style>
 /* HIDE ARROWS IN INPUT NUMBER - > Chrome, Safari, Edge, Opera */
 .input_num::-webkit-outer-spin-button,
 .input_num::-webkit-inner-spin-button {
