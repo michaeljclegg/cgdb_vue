@@ -19,7 +19,9 @@ function buttonClose() {
       >
         <form action="#">
           <!-- //! grid -->
-          <div class="mb-4 grid gap-x-4 gap-y-3 sm:grid-cols-12">
+          <div
+            class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
+          >
             <!-- //! shooting year -->
             <div class="sm:row-start- sm:col-start-1 sm:col-end-3 sm:row-end-2">
               <label

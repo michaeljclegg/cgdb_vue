@@ -1,4 +1,4 @@
-<script setup lang="ts">
+a<script setup lang="ts">
 import { RouterLink } from "vue-router";
 // import { useRouter } from "vue-router";
 // const router = useRouter();

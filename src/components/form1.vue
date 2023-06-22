@@ -24,7 +24,9 @@ function formatNumber(n: number) {
       >
         <form action="#">
           <!-- //! grid -->
-          <div class="mb-4 grid gap-x-4 gap-y-3 sm:grid-cols-12">
+          <div
+            class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
+          >
             <!--//! Thumbnail -->
             <figure
               class="max-w-xs sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:row-end-3"
@@ -42,7 +44,7 @@ function formatNumber(n: number) {
               <textarea
                 id="title"
                 rows="3"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-400 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="The Single Executive Portrait Series #1..."
               ></textarea>
             </div>
@@ -107,30 +109,9 @@ function formatNumber(n: number) {
               />
             </div>
 
-            <!-- //! Gener -->
-            <div
-              class="sm:col-start-3 sm:col-end-5 sm:row-start-4 sm:row-end-5"
-            >
-              <label
-                for="gener"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >gener</label
-              >
-              <select
-                id="gener"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-              >
-                <option selected="">portrait</option>
-                <option value="Portrait">portrait</option>
-                <option value="Still Live">still life</option>
-                <option value="Landscape">landscape</option>
-                <option value="Other">other</option>
-              </select>
-            </div>
-
             <!-- //! variations -->
             <div
-              class="sm:col-start-5 sm:col-end-6 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-3 sm:col-end-4 sm:row-start-4 sm:row-end-5"
             >
               <label
                 for="variations"
@@ -149,6 +130,24 @@ function formatNumber(n: number) {
               />
             </div>
 
+            <!-- //! Dealer -->
+            <div
+              class="sm:col-start-4 sm:col-end-7 sm:row-start-4 sm:row-end-5"
+            >
+              <label
+                for="dealer"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >dealer</label
+              >
+              <input
+                type="text"
+                name="dealer"
+                id="dealer"
+                value=""
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="dealer name...."
+              />
+            </div>
             <!-- //! price -->
             <div
               class="sm:col-start-7 sm:col-end-9 sm:row-start-4 sm:row-end-5"

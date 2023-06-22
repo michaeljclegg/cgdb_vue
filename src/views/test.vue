@@ -17,7 +17,7 @@ onMounted(() => {
 // to filter result set.
 const getColl = () => {
   try {
-    const { documents } = getCollection("artwork", "");
+    const { documents } = getCollection("artworks_cg", "");
     watch(documents, (documents, pre_documents) => {
       artwork.value = documents;
       // console.log("artwork: ", artwork);

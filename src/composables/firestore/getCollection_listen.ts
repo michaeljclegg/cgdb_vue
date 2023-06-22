@@ -27,7 +27,7 @@ const getCollection = (col: string, xquery: string) => {
 
   console.log(colRef);
 
-  const unsub = onSnapshot(colRef, (snapshot) => {
+  const unsub = onSnapshot(colRef, (snapshot: any) => {
     let results: any = [];
     snapshot.docs.forEach((doc) => {
       results.push({ ...doc.data(), id: doc.id });

@@ -20,15 +20,14 @@ function buttonClose() {
         class="rounded-lg border-2 border-solid border-gray-100 bg-white p-4 drop-shadow-xl dark:bg-gray-800 sm:p-5"
       >
         <!-- Modal header -->
-        <div
-          class="mb-4 flex items-center justify-between rounded-t border-b pb-4 dark:border-gray-600 sm:mb-5"
-        >
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white"></h3>
-        </div>
+
         <!--//! Modal body -->
         <form action="#">
           <!-- //! grid -->
-          <div class="mb-4 grid gap-4 sm:grid-cols-2">
+
+          <div
+            class="mb-4 grid gap-4 rounded bg-gray-200 p-2 dark:bg-gray-200 sm:grid-cols-2"
+          >
             <div class="sm:col-span-2">
               <figure class="mx-auto max-w-lg">
                 <img

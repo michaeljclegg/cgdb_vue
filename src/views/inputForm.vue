@@ -11,45 +11,37 @@ const showDetails = ref(false);
 const showImage = ref(false);
 
 const showHideArtwork = () => {
-  showArtwork.value = !showArtwork.value;
-  if (showPrints.value == true) {
+  if (showArtwork.value === false) {
+    showArtwork.value = true;
     showPrints.value = false;
-  } else if (showDetails.value == true) {
     showDetails.value = false;
-  } else if (showImage.value == true) {
     showImage.value = false;
   }
 };
 
 const showHidePrints = () => {
-  showPrints.value = !showPrints.value;
-  if (showArtwork.value == true) {
+  if (showPrints.value === false) {
+    showPrints.value = true;
     showArtwork.value = false;
-  } else if (showDetails.value == true) {
     showDetails.value = false;
-  } else if (showImage.value == true) {
     showImage.value = false;
   }
 };
 
 const showHideDetails = () => {
-  showDetails.value = !showDetails.value;
-  if (showPrints.value == true) {
+  if (showDetails.value === false) {
+    showDetails.value = true;
     showPrints.value = false;
-  } else if (showArtwork.value == true) {
     showArtwork.value = false;
-  } else if (showImage.value == true) {
     showImage.value = false;
   }
 };
 
 const showHideImage = () => {
-  showImage.value = !showImage.value;
-  if (showPrints.value == true) {
+  if (showImage.value === false) {
+    showImage.value = true;
     showPrints.value = false;
-  } else if (showArtwork.value == true) {
     showArtwork.value = false;
-  } else if (showDetails.value == true) {
     showDetails.value = false;
   }
 };
