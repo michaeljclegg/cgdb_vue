@@ -1,9 +1,17 @@
 <script lang="ts" setup>
+
 import form1 from "@/components/form1.vue";
 import form2 from "@/components/form2.vue";
 import form3 from "@/components/form3.vue";
 import form4 from "@/components/form4.vue";
-import { ref } from "vue";
+import { defineComponent, onMounted, ref, watch } from "vue";
+// import artworks from "@/components/artworks.vue";
+// import useLowerCase from "@/composables/firestore/useLowerCase";
+import getCollection from "@/composables/firestore/getCollection";
+
+const artPiece = ref({})
+const fileID = ref(null)
+const isPending = ref(false)
 
 const showArtwork = ref(true);
 const showPrints = ref(false);
@@ -50,11 +58,32 @@ const closeSubForm = () => (showArtwork.value = false);
 const closeSubForm2 = () => (showPrints.value = false);
 const closeSubForm3 = () => (showDetails.value = false);
 const closeSubForm4 = () => (showImage.value = false);
+
+// const changeLowerCase = useLowerCase();
+const error = ref("");
+const artwork = ref(null);
+onMounted(() => {
+  getColl();
+});
+
+const getColl = () => {
+  try {
+    const { documents } = getCollection("artworks_cg", "");
+    watch(documents, (documents, pre_documents) => {
+      artwork.value = documents;
+      // console.log("artwork: ", artwork);
+      return { artwork };
+    });
+  } catch (err: any) {
+    console.log(err.message);
+    error.value = "Could not retrieve data from Firestore / C&G Artworks collection";
+  }
+};
 </script>
 
 <template>
   <!-- Modal toggle -->
-  <!-- //! Nevigation buttons (artwork - prints - details - image)-->
+  <!-- //! Navigation buttons (artwork - prints - details - image)-->
   <div class="my-5 flex justify-center">
     <!--  artwork -->
     <button
@@ -96,6 +125,7 @@ const closeSubForm4 = () => (showImage.value = false);
   <!-- modals -->
   <div v-if="showArtwork" class="mt-1">
     <form1 @closeImage="closeSubForm" />
+    <!--  add all related props - coming from collection. -->
   </div>
   <div v-if="showPrints" class="mt-1">
     <form2 @closeImage="closeSubForm2" />

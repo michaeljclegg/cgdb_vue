@@ -77,6 +77,14 @@ const routes = [
     meta: {
       layout: blank
     }
+  },
+  {
+    path: "/test_col",
+    name: "test_col",
+    component: () => import('../views/test_col.vue'),
+    meta: {
+      layout: blank
+    }
   }
 ]
 

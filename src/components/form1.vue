@@ -4,7 +4,15 @@ function buttonClose() {
   emit("closeImage");
 }
 
-function formatNumber(n: number) {
+const updateData = () => {
+  console.log("i am clicked"); 
+
+
+
+  
+}
+
+  function formatNumber(n: string) {
   // format number 1000000 to 1,234,567
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -180,7 +188,7 @@ function formatNumber(n: number) {
                 id="currency"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
-                <option selected="">€ euro</option>
+                <option selected.value="">€ euro</option>
                 <option value="dollar">$ dollar</option>
                 <option value="pound">£ pound</option>
                 <option value="other">₪ other</option>
@@ -320,6 +328,7 @@ function formatNumber(n: number) {
           <!-- //! control buttons (update - delete - x)  -->
           <div class="flex items-center justify-end space-x-4">
             <button
+              @click="updateData"
               type="submit"
               class="rounded-lg border border-primary-700 px-5 py-2.5 text-center text-sm font-medium text-primary-700 hover:bg-primary-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
             >

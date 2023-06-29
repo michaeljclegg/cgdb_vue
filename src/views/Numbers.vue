@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// IMPORTS
+
 import { useCounterStore } from "../stores/counter";
 import { useIsPrimeFunctions } from "../composables/useIsPrime";
 import { useConvert } from "../composables/useConvertBinHex";

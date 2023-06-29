@@ -23,9 +23,9 @@ const getColl = () => {
       // console.log("artwork: ", artwork);
       return { artwork };
     });
-  } catch (err) {
+  } catch (err: any) {
     console.log(err.message);
-    error.value = "Could not retrieve data from Firestore";
+    error.value = "Could not retrieve data from Firestore / C&G Artworks collection";
   }
 };
 </script>
@@ -33,15 +33,15 @@ const getColl = () => {
 <template>
   <div class="text-2xl text-blue-700">ARTWORKS</div>
   <br />
-  <div v-for="item in artwork" :key="item.index">
+  <div v-for="art in artwork" :key="art.index">
     <!-- <div class="grid grid-cols-[1fr_9fr_2fr] gap-4"> -->
     <div
       class="grid grid-cols-[minmax(50px,_1fr)_minmax(500px,_7fr)_minmax(100px,_2fr)_minmax(100px,_2fr)] gap-4"
     >
-      <div class="text-right">{{ item.index }}</div>
-      <div class="text-left">{{ item.title.toLowerCase() }}</div>
-      <div class="text-left">{{ item.idName.toLowerCase() }}</div>
-      <div class="text-center">{{ item.date }}</div>
+      <div class="text-right">{{ art.index }}</div>
+      <div class="text-left">{{ art.title.toLowerCase() }}</div>
+      <div class="text-left">{{ art.idName.toLowerCase() }}</div>
+      <div class="text-center">{{ art.date }}</div>
     </div>
   </div>
 </template>
