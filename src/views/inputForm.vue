@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-
+import { useCollection } from "../stores/collection";
+import { ref, watchEffect, onMounted } from "vue";
 import form1 from "@/components/form1.vue";
 import form2 from "@/components/form2.vue";
 import form3 from "@/components/form3.vue";
 import form4 from "@/components/form4.vue";
-import { defineComponent, onMounted, ref, watch } from "vue";
 // import artworks from "@/components/artworks.vue";
 // import useLowerCase from "@/composables/firestore/useLowerCase";
-import getCollection from "@/composables/firestore/getCollection";
 
+const col = useCollection();
 const artPiece = ref({})
 const fileID = ref(null)
 const isPending = ref(false)
@@ -59,26 +59,15 @@ const closeSubForm2 = () => (showPrints.value = false);
 const closeSubForm3 = () => (showDetails.value = false);
 const closeSubForm4 = () => (showImage.value = false);
 
-// const changeLowerCase = useLowerCase();
-const error = ref("");
-const artwork = ref(null);
 onMounted(() => {
-  getColl();
+  col.getColl();
+//   console.log("artwork2: ", col.artwork );
 });
 
-const getColl = () => {
-  try {
-    const { documents } = getCollection("artworks_cg", "");
-    watch(documents, (documents, pre_documents) => {
-      artwork.value = documents;
-      // console.log("artwork: ", artwork);
-      return { artwork };
-    });
-  } catch (err: any) {
-    console.log(err.message);
-    error.value = "Could not retrieve data from Firestore / C&G Artworks collection";
-  }
-};
+const artworkList = ref({})
+artworkList.value = col.artwork
+// console.log(artworkList.value);
+
 </script>
 
 <template>
@@ -119,23 +108,30 @@ const getColl = () => {
       image
     </button>
   </div>
-  <p class="text-1xl mt-2 text-red-800">
-    The Single Executive Portrait Series #1..
-  </p>
-  <!-- modals -->
-  <div v-if="showArtwork" class="mt-1">
-    <form1 @closeImage="closeSubForm" />
-    <!--  add all related props - coming from collection. -->
+  <!-- NOTE start of v-for artworks collection -->
+  <div v-for="art in col.artwork" :key="art.index">
+
+      <p class="text-1xl mt-2 text-red-800">
+        Title: {{ art.title }}
+      </p>
+      <!-- modals -->
+      <div v-if="showArtwork" class="mt-1">
+        <form1 :artworkList="art" @closeImage="closeSubForm" />
+             <!--  add all related props - coming from collection. -->
+      </div>
+      <div v-if="showPrints" class="mt-1">
+        <form2 @closeImage="closeSubForm2" />
+      </div>
+      <div v-if="showDetails" class="mt-1">
+        <form3 @closeImage="closeSubForm3" />
+      </div>
+      <div v-if="showImage" class="mt-1">
+        <form4 @closeImage="closeSubForm4" />
+      </div>
   </div>
-  <div v-if="showPrints" class="mt-1">
-    <form2 @closeImage="closeSubForm2" />
-  </div>
-  <div v-if="showDetails" class="mt-1">
-    <form3 @closeImage="closeSubForm3" />
-  </div>
-  <div v-if="showImage" class="mt-1">
-    <form4 @closeImage="closeSubForm4" />
-  </div>
+    <!-- NOTE end of v-for artworks collection -->
+    
+    
   <!-- //! pagination (out of body)-->
   <nav aria-label="Page navigation example">
     <ul class="mt-2 inline-flex -space-x-px">
