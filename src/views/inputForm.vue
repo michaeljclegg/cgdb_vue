@@ -66,7 +66,7 @@ onMounted(() => {
 
 const artworkList = ref({})
 artworkList.value = col.artwork
-// console.log(artworkList.value);
+// console.log(artworkList☺.value);
 
 </script>
 
@@ -112,7 +112,7 @@ artworkList.value = col.artwork
   <div v-for="art in col.artwork" :key="art.index">
 
       <p class="text-1xl mt-2 text-red-800">
-        Title: {{ art.title }}
+        {{ art.index }}: {{ art.title }}
       </p>
       <!-- modals -->
       <div v-if="showArtwork" class="mt-1">
@@ -120,13 +120,13 @@ artworkList.value = col.artwork
              <!--  add all related props - coming from collection. -->
       </div>
       <div v-if="showPrints" class="mt-1">
-        <form2 @closeImage="closeSubForm2" />
+        <form2 :artworkList="art" @closeImage="closeSubForm2" />
       </div>
       <div v-if="showDetails" class="mt-1">
-        <form3 @closeImage="closeSubForm3" />
+        <form3 :artworkList="art" @closeImage="closeSubForm3" />
       </div>
       <div v-if="showImage" class="mt-1">
-        <form4 @closeImage="closeSubForm4" />
+        <form4 :artworkList="art" @closeImage="closeSubForm4" />
       </div>
   </div>
     <!-- NOTE end of v-for artworks collection -->

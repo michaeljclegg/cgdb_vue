@@ -1,8 +1,20 @@
 <script lang="ts" setup>
+import { ref } from "vue";
+
 const emit = defineEmits(["closeImage"]);
 function buttonClose() {
   emit("closeImage");
 }
+
+const props = defineProps(["artworkList"]);
+
+// NOTE list of all variables for form 1 (Artwork)
+const artMaterial = ref(""); // Material
+artMaterial.value = props.artworkList.material;
+const artFramed = ref(""); // Framed
+artFramed.value = props.artworkList.artFramed;
+const artGener = ref(""); // Framed
+artGener.value = props.artworkList.gener;
 </script>
 
 <template>
@@ -32,6 +44,7 @@ function buttonClose() {
                 >material</label
               >
               <select
+              v-model= artMaterial
                 id="material"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -51,10 +64,10 @@ function buttonClose() {
                 >framed</label
               >
               <input
+              v-model= artFramed
                 checked
                 id="radio-2"
                 type="radio"
-                value="false"
                 name="radio2"
                 class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
               />
@@ -186,6 +199,7 @@ function buttonClose() {
                 >gener</label
               >
               <select
+              v-model= artGener
                 id="gener"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >

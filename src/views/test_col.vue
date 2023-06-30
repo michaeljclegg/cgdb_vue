@@ -1,12 +1,23 @@
 <script lang="ts" setup>
+
 import { useCollection } from "../stores/collection";
+import { updateField } from "../composables/firestore/updateField";
 import { ref, watchEffect, onMounted } from "vue";
 const col = useCollection();
 
-onMounted(() => {
-  col.getColl();
-//   console.log("artwork2: ", col.artwork );
-});
+// onMounted(() => {
+//   col.getColl();
+// //   console.log("artwork2: ", col.artwork );
+// });
+updateField()
+  .then(() => {
+    console.log('Field update successful.');
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error('Error updating field:', error);
+    process.exit(1);
+  });
 </script>
 
 <template>
