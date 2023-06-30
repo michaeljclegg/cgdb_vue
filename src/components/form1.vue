@@ -46,6 +46,18 @@ const artCurrency = ref(""); // Currency
 artCurrency.value = props.artworkList.curency;
 const artSold = ref(""); // Sold?
 artSold.value = props.artworkList.sold;
+const artWidth = ref(""); // width?
+artWidth.value = props.artworkList.width;
+const artHeight = ref(""); // height?
+artHeight.value = props.artworkList.height;
+const artDepth = ref(""); // Depth?
+artDepth.value = props.artworkList.depth;
+const artCity = ref(""); // Location City?
+artCity.value = props.artworkList.city;
+const artCountry = ref(""); // Location City?
+artCountry.value = props.artworkList.country;
+const artNote = ref(""); // nOTE?
+artNote.value = props.artworkList.noteDetails;
 // console.log(typeof numIndex);
 </script>
 <template>
@@ -79,7 +91,7 @@ artSold.value = props.artworkList.sold;
             <div
               class="sm:col-start-4 sm:col-end-13 sm:row-start-1 sm:row-end-3"
             >
-                       <textarea
+              <textarea
                 v-model="artTitle"
                 id="title"
                 rows="3"
@@ -216,7 +228,7 @@ artSold.value = props.artworkList.sold;
                 >currency</label
               >
               <select
-              v-model = artCurrency
+                v-model="artCurrency"
                 id="currency"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -237,8 +249,8 @@ artSold.value = props.artworkList.sold;
                 >sold</label
               >
               <input
-              checked
-              v-model = artSold
+                checked
+                v-model="artSold"
                 id="radio-2"
                 type="radio"
                 name="radio2"
@@ -256,12 +268,12 @@ artSold.value = props.artworkList.sold;
                 >width</label
               >
               <input
+                v-model="artWidth"
                 type="number"
                 name="width"
                 id="width"
-                value=""
                 class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="120"
+                placeholder="000"
               />
             </div>
             <!-- //! Height -->
@@ -274,12 +286,12 @@ artSold.value = props.artworkList.sold;
                 >height</label
               >
               <input
+                v-model="artHeight"
                 type="number"
                 name="height"
                 id="height"
-                value=""
                 class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="170"
+                placeholder="000"
               />
             </div>
             <!-- //! Depth -->
@@ -292,12 +304,12 @@ artSold.value = props.artworkList.sold;
                 >depth</label
               >
               <input
+                v-model="artDepth"
                 type="number"
-                value=""
                 name="depth"
                 id="depth"
                 class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="20"
+                placeholder="00"
               />
             </div>
 
@@ -311,12 +323,12 @@ artSold.value = props.artworkList.sold;
                 >city</label
               >
               <input
+                v-model="artCity"
                 type="text"
-                value=""
                 name="city"
                 id="city"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="New York"
+                placeholder="Location City"
               />
             </div>
             <!-- //! Location country  -->
@@ -329,12 +341,12 @@ artSold.value = props.artworkList.sold;
                 >country</label
               >
               <input
+                v-model="artCountry"
                 type="text"
-                value=""
                 name="country"
                 id="country"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="USA"
+                placeholder="Location Country"
               />
             </div>
 
@@ -348,12 +360,13 @@ artSold.value = props.artworkList.sold;
                 >notes</label
               >
               <textarea
+                v-model="artNote"
                 id="description"
                 rows="5"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="Write a description..."
               >
-...this is the first image taken in the studio NY 1980</textarea
+<div class="Note"></div></textarea
               >
             </div>
           </div>

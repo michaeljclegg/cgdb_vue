@@ -301,3 +301,39 @@ collectionReference.get()
   });
 
   //-----------------------------------------------------------
+//! Duplicate table
+/*   In this example, the duplicateCollection() function takes the paths of the original collection and the duplicate collection as input. It retrieves the documents from the original collection using get() and then creates new documents in the duplicate collection using set().
+
+Remember to replace 'originalCollection' and 'duplicateCollection' with the actual paths of your collections.. */
+
+  const admin = require('firebase-admin');
+const serviceAccount = require('path/to/serviceAccountKey.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
+
+// Function to duplicate a collection
+async function duplicateCollection(originalCollectionPath, duplicateCollectionPath) {
+  const originalCollectionRef = db.collection(originalCollectionPath);
+  const duplicateCollectionRef = db.collection(duplicateCollectionPath);
+
+  const snapshot = await originalCollectionRef.get();
+
+  snapshot.forEach((doc) => {
+    const data = doc.data();
+    duplicateCollectionRef.doc(doc.id).set(data);
+  });
+}
+
+// Usage example
+duplicateCollection('originalCollection', 'duplicateCollection')
+  .then(() => {
+    console.log('Collection duplicated successfully!');
+  })
+  .catch((error) => {
+    console.error('Error duplicating collection:', error);
+  });
+//--------------------------------------------------------
