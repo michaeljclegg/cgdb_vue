@@ -13,8 +13,28 @@ const artMaterial = ref(""); // Material
 artMaterial.value = props.artworkList.material;
 const artFramed = ref(""); // Framed
 artFramed.value = props.artworkList.artFramed;
-const artGener = ref(""); // Framed
+const artGener = ref(""); // Gener
 artGener.value = props.artworkList.gener;
+const artMounting = ref(""); // Mounting
+artMounting.value = props.artworkList.mounting;
+const artLaminated = ref(""); // Laminated
+artLaminated.value = props.artworkList.laminated;
+const artCategory = ref(""); // Category
+artCategory.value = props.artworkList.category;
+const artCondition = ref(""); // Condition
+artCondition.value = props.artworkList.condition;
+const artType = ref(""); // Type
+artType.value = props.artworkList.type;
+const artSubtype = ref(""); // Subtype
+artSubtype.value = props.artworkList.subtype;
+const artSitters = ref(""); // Sitters
+artSitters.value = props.artworkList.sitters;
+const artLocationCity = ref(""); // Location City
+artLocationCity.value = props.artworkList.city;
+const artPanels = ref(""); // Panels
+artPanels.value = props.artworkList.panels;
+const artPrintNotes = ref(""); // Print Notes
+artPrintNotes.value = props.artworkList.notePrint;
 </script>
 
 <template>
@@ -32,7 +52,7 @@ artGener.value = props.artworkList.gener;
         <form action="#">
           <!-- //! grid -->
           <div
-            class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 sm:grid-cols-12 dark:bg-gray-700"
+            class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
           >
             <!-- //! material -->
             <div
@@ -44,7 +64,7 @@ artGener.value = props.artworkList.gener;
                 >material</label
               >
               <select
-              v-model= artMaterial
+                v-model="artMaterial"
                 id="material"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -64,13 +84,34 @@ artGener.value = props.artworkList.gener;
                 >framed</label
               >
               <input
-              v-model= artFramed
+                v-model="artFramed"
                 checked
                 id="radio-2"
                 type="radio"
                 name="radio2"
                 class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
               />
+            </div>
+              <!-- //! Gener -->
+              <div
+              class="sm:col-start-9 sm:col-end-12 sm:row-start-1 sm:row-end-2"
+            >
+              <label
+                for="gener"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >gener</label
+              >
+              <select
+                v-model="artGener"
+                id="gener"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+              >
+                <option selected="">portrait</option>
+                <option value="Portrait">portrait</option>
+                <option value="Still Live">still life</option>
+                <option value="Landscape">landscape</option>
+                <option value="Other">other</option>
+              </select>
             </div>
             <!-- //! mounting -->
             <div
@@ -102,7 +143,7 @@ artGener.value = props.artworkList.gener;
                 >laminated</label
               >
               <input
-                checked
+                v-model="artLaminated"
                 id="radio-2"
                 type="radio"
                 value="false"
@@ -120,6 +161,7 @@ artGener.value = props.artworkList.gener;
                 >condition</label
               >
               <select
+              v-model="artCondition"
                 id="condition"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -135,17 +177,17 @@ artGener.value = props.artworkList.gener;
               class="sm:col-start-6 sm:col-end-7 sm:row-start-3 sm:row-end-4"
             >
               <label
-                for="variations"
+                for="sitters"
                 class="input_num mb-2 block text-center text-sm font-medium text-gray-900 dark:text-white"
                 >sitters</label
               >
               <input
+              v-model="artSitters"
                 type="number"
-                value="1"
                 min="1"
                 max="20"
-                name="film_num"
-                id="film_num"
+                name="sitters"
+                id="sitters"
                 class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="1"
               />
@@ -155,15 +197,15 @@ artGener.value = props.artworkList.gener;
               class="sm:col-start-2 sm:col-end-5 sm:row-start-4 sm:row-end-5"
             >
               <label
-                for="year"
+                for="locationCity"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                 >location city</label
               >
               <input
+              v-model="artLocationCity"
                 type="text"
-                name="year"
-                id="year"
-                value=""
+                name="locationCity"
+                id="locationCity"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="New York"
               />
@@ -173,14 +215,14 @@ artGener.value = props.artworkList.gener;
               class="sm:col-start-6 sm:col-end-7 sm:row-start-4 sm:row-end-5"
             >
               <label
-                for="variations"
+                for="panels"
                 class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                 >panels</label
               >
               <input
+              v-model="artPanels"
                 type="number"
-                value="1"
-                min="1"
+                                min="1"
                 max="8"
                 name="panels"
                 id="panels"
@@ -189,27 +231,6 @@ artGener.value = props.artworkList.gener;
               />
             </div>
 
-            <!-- //! Gener -->
-            <div
-              class="sm:col-start-9 sm:col-end-12 sm:row-start-1 sm:row-end-2"
-            >
-              <label
-                for="gener"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >gener</label
-              >
-              <select
-              v-model= artGener
-                id="gener"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-              >
-                <option selected="">portrait</option>
-                <option value="Portrait">portrait</option>
-                <option value="Still Live">still life</option>
-                <option value="Landscape">landscape</option>
-                <option value="Other">other</option>
-              </select>
-            </div>
             <!-- //! category -->
             <div
               class="sm:col-start-9 sm:col-end-12 sm:row-start-2 sm:row-end-3"
@@ -220,6 +241,7 @@ artGener.value = props.artworkList.gener;
                 >category</label
               >
               <select
+                v-model= artCategory
                 id="category"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -258,6 +280,7 @@ artGener.value = props.artworkList.gener;
                 >sub type</label
               >
               <select
+              v-model="artSubtype"
                 id="sub type"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -272,8 +295,8 @@ artGener.value = props.artworkList.gener;
                 <option value="adult group female">adult group female</option>
                 <option value="adult group mixed">adult group mixed</option>
                 <option value="family one parent">family one parent</option>
-                <option value="Othfamily one two parentser">
-                  family one two parents
+                <option value="family two parentser">
+                  family two parents
                 </option>
                 <option value="children">children</option>
               </select>
@@ -289,12 +312,13 @@ artGener.value = props.artworkList.gener;
                 >print notes</label
               >
               <textarea
+              v-model="artPrintNotes"
                 id="description"
                 rows="4"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="Write a description..."
               >
-...this is the first image taken in the studio NY 1980</textarea
+...Notes related to Print</textarea
               >
             </div>
           </div>
@@ -311,7 +335,7 @@ artGener.value = props.artworkList.gener;
               class="inline-flex items-center rounded-lg border border-red-600 px-5 py-2.5 text-center text-sm font-medium text-red-600 hover:bg-red-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
             >
               <svg
-                class="mr-1 -ml-1 h-5 w-5"
+                class="-ml-1 mr-1 h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
