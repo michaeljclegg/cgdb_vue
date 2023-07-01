@@ -92,8 +92,8 @@ artPrintNotes.value = props.artworkList.notePrint;
                 class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
               />
             </div>
-              <!-- //! Gener -->
-              <div
+            <!-- //! Gener -->
+            <div
               class="sm:col-start-9 sm:col-end-12 sm:row-start-1 sm:row-end-2"
             >
               <label
@@ -161,7 +161,7 @@ artPrintNotes.value = props.artworkList.notePrint;
                 >condition</label
               >
               <select
-              v-model="artCondition"
+                v-model="artCondition"
                 id="condition"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -182,7 +182,7 @@ artPrintNotes.value = props.artworkList.notePrint;
                 >sitters</label
               >
               <input
-              v-model="artSitters"
+                v-model="artSitters"
                 type="number"
                 min="1"
                 max="20"
@@ -202,7 +202,7 @@ artPrintNotes.value = props.artworkList.notePrint;
                 >location city</label
               >
               <input
-              v-model="artLocationCity"
+                v-model="artLocationCity"
                 type="text"
                 name="locationCity"
                 id="locationCity"
@@ -220,9 +220,9 @@ artPrintNotes.value = props.artworkList.notePrint;
                 >panels</label
               >
               <input
-              v-model="artPanels"
+                v-model="artPanels"
                 type="number"
-                                min="1"
+                min="1"
                 max="8"
                 name="panels"
                 id="panels"
@@ -241,7 +241,7 @@ artPrintNotes.value = props.artworkList.notePrint;
                 >category</label
               >
               <select
-                v-model= artCategory
+                v-model="artCategory"
                 id="category"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -280,7 +280,7 @@ artPrintNotes.value = props.artworkList.notePrint;
                 >sub type</label
               >
               <select
-              v-model="artSubtype"
+                v-model="artSubtype"
                 id="sub type"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
@@ -295,9 +295,7 @@ artPrintNotes.value = props.artworkList.notePrint;
                 <option value="adult group female">adult group female</option>
                 <option value="adult group mixed">adult group mixed</option>
                 <option value="family one parent">family one parent</option>
-                <option value="family two parentser">
-                  family two parents
-                </option>
+                <option value="family two parentser">family two parents</option>
                 <option value="children">children</option>
               </select>
             </div>
@@ -312,7 +310,7 @@ artPrintNotes.value = props.artworkList.notePrint;
                 >print notes</label
               >
               <textarea
-              v-model="artPrintNotes"
+                v-model="artPrintNotes"
                 id="description"
                 rows="4"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"

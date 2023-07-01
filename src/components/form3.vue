@@ -1,8 +1,32 @@
 <script lang="ts" setup>
+import { ref } from "vue";
+
 const emit = defineEmits(["closeImage"]);
 function buttonClose() {
   emit("closeImage");
 }
+
+const props = defineProps(["artworkList"]);
+
+// NOTE list of all variables for form 1 (Artwork)
+const artShootingDate = ref(""); // Shooting Date
+artShootingDate.value = props.artworkList.dateShooting;
+const artShootingCity = ref(""); // Shooting Date
+artShootingCity.value = props.artworkList.cityShooting;
+const artTransparencySize = ref(""); // Transparency Size
+artTransparencySize.value = props.artworkList.transparencySize;
+const artTransparencyNumber = ref(""); // Transparency Number
+artTransparencyNumber.value = props.artworkList.transparencyNumber;
+const artPhotographedAt = ref(""); // Photographed At
+artPhotographedAt.value = props.productionLocation;
+const artBackground = ref(""); // Background
+artBackground.value = props.artworkList.background;
+const artAccessories = ref(""); // Accessories
+artAccessories.value = props.artworkList.accessories;
+const artReproduced = ref(""); // Reproduced
+artReproduced.value = props.artworkList.reproduced;
+const artTransparencyNotes = ref(""); // Transparency Notes
+artTransparencyNotes.value = props.artworkList.noteTransparency;
 </script>
 
 <template>
@@ -27,25 +51,25 @@ function buttonClose() {
               <label
                 for="shooting_year"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >shooting year</label
+                >shooting date</label
               >
               <input
+                v-model="artShootingDate"
                 type="text"
                 name="shooting_year"
                 id="shooting_year"
-                value=""
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="1980"
               />
             </div>
-            <!-- //! shooting place -->
+            <!-- //!  place -->
             <div
-              class="sm:col-start-4 sm:col-end-7 sm:row-start-1 sm:row-end-2"
+              class="sm:col-start-4 sm:col-end-6 sm:row-start-1 sm:row-end-2"
             >
               <label
                 for="shooting_place"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >shooting place</label
+                >... place</label
               >
               <input
                 type="text"
@@ -76,7 +100,7 @@ function buttonClose() {
             </div>
             <!-- //! film size -->
             <div
-              class="sm:col-start-1 sm:col-end-4 sm:row-start-2 sm:row-end-3"
+              class="sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3"
             >
               <label
                 for="film_size"
@@ -84,10 +108,11 @@ function buttonClose() {
                 >film size</label
               >
               <select
+                v-model="artTransparencySize"
                 id="film_size"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
               >
-                <option selected="4x5">4x5</option>
+                <option value="4x5">4x5</option>
                 <option value="5x7">5x7</option>
                 <option value="8x10">8x10</option>
                 <option value="35mm">35mm</option>
@@ -95,25 +120,6 @@ function buttonClose() {
               </select>
             </div>
 
-            <!-- //! photographed  -->
-            <div
-              class="sm:col-start-1 sm:col-end-4 sm:row-start-3 sm:row-end-4"
-            >
-              <label
-                for="condition"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >photographed</label
-              >
-              <select
-                id="photographed"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-              >
-                <option selected="subject">subject</option>
-                <option value="studio">studio</option>
-                <option value="outdoor">outdoor</option>
-                <option value="other">other</option>
-              </select>
-            </div>
             <!-- //! number of film -->
             <div
               class="sm:col-start-5 sm:col-end-6 sm:row-start-2 sm:row-end-3"
@@ -125,7 +131,7 @@ function buttonClose() {
               >
               <input
                 type="number"
-                value="1"
+                v-model="artTransparencyNumber"
                 min="1"
                 max="20"
                 name="film_num"
@@ -134,82 +140,99 @@ function buttonClose() {
                 placeholder="1"
               />
             </div>
+
+            <!-- //! photographed  -->
+            <div
+              class="sm:col-start-1 sm:col-end-4 sm:row-start-3 sm:row-end-4"
+            >
+              <label
+                for="photographed"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >photographed at</label
+              >
+              <select
+                v-model="artPhotographedAt"
+                id="photographed"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+              >
+                <option value="subject">subject</option>
+                <option value="studio">studio</option>
+                <option value="outdoor">outdoor</option>
+                <option value="other">other</option>
+              </select>
+            </div>
+
             <!-- //! location city -->
             <div
               class="sm:col-start-1 sm:col-end-4 sm:row-start-4 sm:row-end-5"
             >
               <label
-                for="year"
+                for="shootingCity"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >location city</label
+                >shooting city</label
               >
               <input
+                v-model="artShootingCity"
                 type="text"
-                name="year"
-                id="year"
-                value=""
+                name="shootingCity"
+                id="shootingCity"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="New York"
               />
             </div>
             <!-- //! background -->
             <div
-              class="sm:col-start-5 sm:col-end-6 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-5 sm:col-end-12 sm:row-start-4 sm:row-end-5"
             >
               <label
-                for="radio-5"
+                for="background"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >backgound</label
+                >background</label
               >
               <input
-                checked
-                id="radio-5"
-                type="radio"
-                value="false"
-                name="radio5"
-                class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+                v-model="artBackground"
+                id="background"
+                type="text"
+                name="background"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="Description"
               />
             </div>
 
-            <!-- //! Gener -->
+            <!-- //! Accessories -->
             <div
-              class="sm:col-start-9 sm:col-end-12 sm:row-start-1 sm:row-end-2"
+              class="sm:col-start-7 sm:col-end-12 sm:row-start-1 sm:row-end-3"
             >
               <label
-                for="gener"
+                for="Accessories"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >gener</label
+                >accessories</label
               >
-              <select
-                id="gener"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-              >
-                <option selected="">portrait</option>
-                <option value="Portrait">portrait</option>
-                <option value="Still Live">still life</option>
-                <option value="Landscape">landscape</option>
-                <option value="Other">other</option>
-              </select>
+              <input
+                v-model="artAccessories"
+                type="text"
+                id="Accessories"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="Description"
+              />
             </div>
 
-            <!-- //! category -->
+            <!-- //! reproduced -->
             <div
-              class="sm:col-start-9 sm:col-end-12 sm:row-start-2 sm:row-end-3"
+              class="sm:col-start-7 sm:col-end-12 sm:row-start-2 sm:row-end-3"
             >
               <label
-                for="category"
+                for="reproduced"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >category</label
+                >reproduced</label
               >
-              <select
-                id="category"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-              >
-                <option selected="fictional">fictional</option>
-                <option value="commissioned">commissioned</option>
-                <option value="rejected">rejected</option>
-                <option value="collaboration">collaboration</option>
-              </select>
+              <input
+                v-model="artReproduced"
+                type="text"
+                id="reproduced"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="Description"
+              />
             </div>
 
             <!-- //! film notes  -->
@@ -222,12 +245,13 @@ function buttonClose() {
                 >film notes</label
               >
               <textarea
+                v-model="artTransparencyNotes"
                 id="subject notes"
                 rows="3"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="Write a description..."
               >
-...this is the first image taken in the studio NY 1980</textarea
+...film notes</textarea
               >
             </div>
           </div>
@@ -244,7 +268,7 @@ function buttonClose() {
               class="inline-flex items-center rounded-lg border border-red-600 px-5 py-2.5 text-center text-sm font-medium text-red-600 hover:bg-red-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
             >
               <svg
-                class="mr-1 -ml-1 h-5 w-5"
+                class="-ml-1 mr-1 h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
