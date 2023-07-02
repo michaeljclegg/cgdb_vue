@@ -1,15 +1,9 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-// const props = defineProps({
-//   artworkList: {
-//     type: Object,
-//     required: true
-//   }
-// })
-const props = defineProps(["artworkList"]);
-// console.log(typeof props.artworkList)
 
+const props = defineProps(["artworkList"]);
 const emit = defineEmits(["closeImage"]);
+
 function buttonClose() {
   emit("closeImage");
 }

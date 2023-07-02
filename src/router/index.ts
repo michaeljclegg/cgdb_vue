@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import ViewAuth from "../views/auth/ViewAuth.vue";
 import inputForm from "../views/inputForm.vue";
+import displayForm from "../views/displayForm.vue";
 import main from '../layouts/main.vue';
 import blank from '../layouts/blank.vue';
 import center from '../layouts/center.vue';
@@ -42,6 +43,14 @@ const routes = [
     path: "/input",
     name: "input",
     component: inputForm,
+    meta: {
+      layout: blank
+    }
+  },
+  {
+    path: "/display",
+    name: "display",
+    component: displayForm,
     meta: {
       layout: blank
     }

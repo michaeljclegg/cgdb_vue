@@ -1,77 +1,109 @@
 <script lang="ts" setup>
-import { useCollection } from "../stores/collection";
-import { ref, watchEffect, onMounted } from "vue";
+import { ref } from "vue";
+// const props = defineProps({
+//   artworkList: {
+//     type: Object,
+//     required: true
+//   }
+// })
+const props = defineProps(["artworkList"]);
+// console.log(typeof props.artworkList)
 
-// import artworks from "@/components/artworks.vue";
-// import useLowerCase from "@/composables/firestore/useLowerCase";
+const emit = defineEmits(["closeImage"]);
+function buttonClose() {
+  emit("closeImage");
+}
 
-const col = useCollection();
-const artPiece = ref({})
-const fileID = ref(null)
-const isPending = ref(false)
+const updateData = () => {
+  console.log("i am clicked");
+};
 
+function formatNumber(n: string) {
+  // format number 1000000 to 1,234,567
+  return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
-
-onMounted(() => {
-  col.getColl();
-//   console.log("artwork2: ", col.artwork );
-});
-
-const artworkList = ref({})
-artworkList.value = col.artwork
-// console.log(artworkList☺.value);
 // NOTE list of all variables for form 1 (Artwork)
 //! Title
 const artTitle = ref(""); 
+artTitle.value = props.artworkList.title;
  // Index
 const artIndex = ref("");
+artIndex.value = props.artworkList.index;
+const numIndex = Number(artIndex.value);
 // Id Name
 const artIdName = ref(""); 
+artIdName.value = props.artworkList.idName;
 // Variations Number
 const artVariations = ref(""); 
+artVariations.value = props.artworkList.variations;
+const numVariations = Number(artVariations.value);
 // Year
 const artYear = ref(""); 
+artYear.value = props.artworkList.year;
 const numYear = Number(artYear.value);
 // Dealer / Institute  Name
 const artDealer = ref(""); 
+artDealer.value = props.artworkList.dealer;
 // Price
 const artPrice = ref(""); 
+artPrice.value = props.artworkList.price;
+const numPrice = Number(artPrice.value);
 // Currency
 const artCurrency = ref(""); 
+artCurrency.value = props.artworkList.curency;
  // Sold?
 const artSold = ref("");
+artSold.value = props.artworkList.sold;
 // width?
 const artWidth = ref(""); 
+artWidth.value = props.artworkList.width;
 // height?
 const artHeight = ref(""); 
+artHeight.value = props.artworkList.height;
 // Depth?
-const artDepth = ref(""); 
+const artDepth = ref(""); // Depth?
+artDepth.value = props.artworkList.depth;
 // Location City?
 const artCity = ref(""); 
+artCity.value = props.artworkList.city;
 // Location Country
 const artCountry = ref(""); 
+artCountry.value = props.artworkList.country;
 //Notes
 const artNote = ref(""); 
-
+artNote.value = props.artworkList.noteDetails;
 // console.log(typeof numIndex);
 </script>
-
 <template>
-  <!-- Modal toggle -->
-  <!-- //! Navigation buttons (artwork - prints - details - image)-->
-  <div class="my-5 flex justify-center">
-    <!--  artwork -->
-
-  </div>
-
-    <!-- NOTE end of v-for artworks collection -->
-    <form action="#">
+  <div
+    id="form1"
+    tabindex="1"
+    aria-hidden="true"
+    class="flex w-full items-center justify-center overflow-y-auto overflow-x-hidden md:h-full"
+  >
+    <div class="relative h-full w-full max-w-2xl p-2 md:h-auto">
+      <!-- Modal content -->
+      <div
+        class="rounded-lg border-2 border-solid border-gray-100 bg-white p-4 drop-shadow-xl dark:bg-gray-800 sm:p-4"
+      >
+        <form action="#">
           <!-- //! grid -->
           <div
             class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
-          >D
-    <!-- //! Title  -->
-    <div
+          >
+            <!--//! Thumbnail -->
+            <figure
+              class="max-w-xs sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:row-end-3"
+            >
+              <img
+                class="h-auto"
+                src="@\assets\images\The_Cigar_Eaters_1983TN100.jpg"
+                alt="The Cigar Eaters, 1983"
+              />
+            </figure>
+            <!-- //! Title  -->
+            <div
               class="sm:col-start-4 sm:col-end-13 sm:row-start-1 sm:row-end-3"
             >
               <textarea
@@ -403,26 +435,21 @@ const artNote = ref("");
             </button>
           </div>
         </form>
-    
-    
-  <!-- //! pagination (out of body)-->
-  <nav aria-label="Page navigation example">
-    <ul class="mt-2 inline-flex -space-x-px">
-
-      <li>
-        <a
-          href="#"
-          class="border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-          >5</a
-        >
-      </li>
-      <li>
-        <a
-          href="#"
-          class="rounded-r-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-          >Next</a
-        >
-      </li>
-    </ul>
-  </nav>
+      </div>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+/* HIDE ARROWS IN INPUT NUMBER - > Chrome, Safari, Edge, Opera */
+.input_num::-webkit-outer-spin-button,
+.input_num::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.input_num[type="number"] {
+  -moz-appearance: textfield;
+}
+</style>

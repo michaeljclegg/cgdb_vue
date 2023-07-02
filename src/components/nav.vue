@@ -10,8 +10,9 @@ import { RouterLink } from "vue-router";
       <RouterLink :to="{ name: 'home' }">
         <div class="flex items-center gap-3 text-[20px]">home</div>
       </RouterLink>
-      <RouterLink :to="{ name: 'about' }">
-        <div class="flex items-center gap-3 text-[20px]">about</div>
+      <RouterLink 
+        :to="{ name: 'display' }">
+        <div class="flex items-center gap-3 text-[20px]">display</div>
       </RouterLink>
       <RouterLink
         :to="{ name: 'input' }"
@@ -23,6 +24,9 @@ import { RouterLink } from "vue-router";
         class="flex items-center gap-3 text-[20px]"
         >artworks</RouterLink
       >
+      <RouterLink :to="{ name: 'about' }">
+        <div class="flex items-center gap-3 text-[20px]">about</div>
+      </RouterLink>
     </nav>
   </header>
 </template>
