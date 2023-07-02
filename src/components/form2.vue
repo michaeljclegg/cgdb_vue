@@ -9,30 +9,43 @@ function buttonClose() {
 const props = defineProps(["artworkList"]);
 
 // NOTE list of all variables for form 1 (Artwork)
-const artMaterial = ref(""); // Material
+//Material
+const artMaterial = ref(""); 
 artMaterial.value = props.artworkList.material;
-const artFramed = ref(""); // Framed
-artFramed.value = props.artworkList.artFramed;
-const artGener = ref(""); // Gener
+// Framed
+const artFramed = ref(""); 
+artFramed.value = props.artworkList.framed;
+// Gener
+const artGener = ref(""); 
 artGener.value = props.artworkList.gener;
+// Mounting
 const artMounting = ref(""); // Mounting
 artMounting.value = props.artworkList.mounting;
+//Laminated
 const artLaminated = ref(""); // Laminated
 artLaminated.value = props.artworkList.laminated;
+//Category
 const artCategory = ref(""); // Category
 artCategory.value = props.artworkList.category;
+//condition
 const artCondition = ref(""); // Condition
 artCondition.value = props.artworkList.condition;
+//Type
 const artType = ref(""); // Type
 artType.value = props.artworkList.type;
+//Subtype
 const artSubtype = ref(""); // Subtype
 artSubtype.value = props.artworkList.subtype;
+//Sitters
 const artSitters = ref(""); // Sitters
 artSitters.value = props.artworkList.sitters;
+//Location city
 const artLocationCity = ref(""); // Location City
 artLocationCity.value = props.artworkList.city;
+//Panels
 const artPanels = ref(""); // Panels
 artPanels.value = props.artworkList.panels;
+// Print Notes
 const artPrintNotes = ref(""); // Print Notes
 artPrintNotes.value = props.artworkList.notePrint;
 </script>

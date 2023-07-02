@@ -9,22 +9,31 @@ function buttonClose() {
 const props = defineProps(["artworkList"]);
 
 // NOTE list of all variables for form 1 (Artwork)
+// Shooting Date
 const artShootingDate = ref(""); // Shooting Date
 artShootingDate.value = props.artworkList.dateShooting;
-const artShootingCity = ref(""); // Shooting Date
+//Shooting City
+const artShootingCity = ref(""); // Shooting City
 artShootingCity.value = props.artworkList.cityShooting;
+// Transparency Size
 const artTransparencySize = ref(""); // Transparency Size
 artTransparencySize.value = props.artworkList.transparencySize;
+//Transparency Number
 const artTransparencyNumber = ref(""); // Transparency Number
 artTransparencyNumber.value = props.artworkList.transparencyNumber;
+// Photographed At
 const artPhotographedAt = ref(""); // Photographed At
 artPhotographedAt.value = props.productionLocation;
+ // Background
 const artBackground = ref(""); // Background
 artBackground.value = props.artworkList.background;
+// Accessories
 const artAccessories = ref(""); // Accessories
 artAccessories.value = props.artworkList.accessories;
+
 const artReproduced = ref(""); // Reproduced
 artReproduced.value = props.artworkList.reproduced;
+
 const artTransparencyNotes = ref(""); // Transparency Notes
 artTransparencyNotes.value = props.artworkList.noteTransparency;
 </script>

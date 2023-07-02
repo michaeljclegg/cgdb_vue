@@ -28,6 +28,8 @@ const getColl = () => {
     error.value = "Could not retrieve data from Firestore / C&G Artworks collection";
   }
 };
+
+
   
 
     return { artwork, getColl, error }

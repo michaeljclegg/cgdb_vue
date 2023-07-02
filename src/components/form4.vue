@@ -1,8 +1,19 @@
 <script lang="ts" setup>
+import { ref } from "vue";
+
 const emit = defineEmits(["closeImage"]);
 function buttonClose() {
   emit("closeImage");
 }
+
+const props = defineProps(["artworkList"]);
+
+// NOTE list of all variables for form 1 (Artwork)
+// Shooting Date
+const artImage = ref([]); // Shooting Date
+artImage.value = props.artworkList.image
+
+;
 </script>
 
 <template>

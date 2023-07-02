@@ -24,39 +24,54 @@ function formatNumber(n: string) {
 }
 
 // NOTE list of all variables for form 1 (Artwork)
-const artTitle = ref(""); // Title
+//! Title
+const artTitle = ref(""); 
 artTitle.value = props.artworkList.title;
-const artIndex = ref(""); // Index
+ // Index
+const artIndex = ref("");
 artIndex.value = props.artworkList.index;
 const numIndex = Number(artIndex.value);
-const artIdName = ref(""); // Id Name
+// Id Name
+const artIdName = ref(""); 
 artIdName.value = props.artworkList.idName;
-const artVariations = ref(""); // Variations
+// Variations Number
+const artVariations = ref(""); 
 artVariations.value = props.artworkList.variations;
 const numVariations = Number(artVariations.value);
-const artYear = ref(""); // Year
+// Year
+const artYear = ref(""); 
 artYear.value = props.artworkList.year;
 const numYear = Number(artYear.value);
-const artDealer = ref(""); // Dealer / Institute  Name
+// Dealer / Institute  Name
+const artDealer = ref(""); 
 artDealer.value = props.artworkList.dealer;
-const artPrice = ref(""); // Price
+// Price
+const artPrice = ref(""); 
 artPrice.value = props.artworkList.price;
 const numPrice = Number(artPrice.value);
-const artCurrency = ref(""); // Currency
+// Currency
+const artCurrency = ref(""); 
 artCurrency.value = props.artworkList.curency;
-const artSold = ref(""); // Sold?
+ // Sold?
+const artSold = ref("");
 artSold.value = props.artworkList.sold;
-const artWidth = ref(""); // width?
+// width?
+const artWidth = ref(""); 
 artWidth.value = props.artworkList.width;
-const artHeight = ref(""); // height?
+// height?
+const artHeight = ref(""); 
 artHeight.value = props.artworkList.height;
+// Depth?
 const artDepth = ref(""); // Depth?
 artDepth.value = props.artworkList.depth;
-const artCity = ref(""); // Location City?
+// Location City?
+const artCity = ref(""); 
 artCity.value = props.artworkList.city;
-const artCountry = ref(""); // Location City?
+// Location Country
+const artCountry = ref(""); 
 artCountry.value = props.artworkList.country;
-const artNote = ref(""); // nOTE?
+//Notes
+const artNote = ref(""); 
 artNote.value = props.artworkList.noteDetails;
 // console.log(typeof numIndex);
 </script>
