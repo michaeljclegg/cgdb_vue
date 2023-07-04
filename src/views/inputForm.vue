@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 import { useCollection } from "../stores/collection";
 import { ref, watchEffect, onMounted } from "vue";
+import  router from "../router";
 
+const buttonHome = () => {
+  router.push('/');
+}
 // import artworks from "@/components/artworks.vue";
 // import useLowerCase from "@/composables/firestore/useLowerCase";
 
@@ -17,7 +21,6 @@ onMounted(() => {
 
 const artworkList = ref({});
 artworkList.value = col.artwork;
-// console.log(artworkList☺.value);
 // NOTE list of all variables for form 1 (Artwork)
 //! Title
 const artTitle = ref("");
@@ -27,6 +30,7 @@ const artIndex = ref("");
 const artIdName = ref("");
 // Variations Number
 const artVariations = ref("");
+const numVariations = Number(artVariations.value)
 // Year
 const artYear = ref("");
 const numYear = Number(artYear.value);
@@ -34,6 +38,7 @@ const numYear = Number(artYear.value);
 const artDealer = ref("");
 // Price
 const artPrice = ref("");
+const numPrice = Number(artPrice.value);
 // Currency
 const artCurrency = ref("");
 // Sold?
@@ -94,13 +99,23 @@ const artAccessories = ref(""); // Accessories
 const artReproduced = ref(""); // Reproduced
 // Transparency Notes
 const artTransparencyNotes = ref(""); // Transparency Notes
-// console.log(typeof numIndex);
+
+const addData =  () => {
+  // do add to db
+  console.log("add data button pressed")
+}
+
+const deleteData =  () => {
+  // do add to db
+  console.log("delete button pressed")
+}
 </script>
 
 <template>
   <!-- Modal toggle -->
   <!-- //! Navigation buttons (artwork - prints - details - image)-->
-  <div class="my-5 flex justify-center">
+  <div class="my-5 flex justify-center ">
+    <!-- relative h-full w-full max-w-2xl p-2 -->
     <!--  artwork -->
   </div>
 
@@ -108,11 +123,11 @@ const artTransparencyNotes = ref(""); // Transparency Notes
   <form action="#">
     <!-- //! grid -->
     <div
-      class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
+      class="mb-4 grid gap-x-4 gap-y-2 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
     >
      <!--//! Thumbnail -->
      <figure
-              class="max-w-xs sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3"
+              class="max-w-xs sm:col-start-2 sm:col-end-4 sm:row-start-1 sm:row-end-3"
             >
               <img
                 class="h-auto"
@@ -121,7 +136,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
               />
             </figure>
       <!-- //! Title  -->
-      <div class="sm:col-start-4 sm:col-end-13 sm:row-start-1 sm:row-end-3">
+      <div class="sm:col-start-4 sm:col-end-12 sm:row-start-1 sm:row-end-3">
         <textarea
           v-model="artTitle"
           id="title"
@@ -131,14 +146,14 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         ></textarea>
       </div>
       <!-- //! index -->
-      <div class="sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4">
+      <div class="sm:col-start-2 sm:col-end-3 sm:row-start-3 sm:row-end-4">
         <label
           for="index"
           class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >index</label
         >
         <input
-          v-model="numIndex"
+          v-model="artIndex"
           type="number"
           min="1"
           max="1000"
@@ -149,7 +164,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! id Name -->
-      <div class="sm:col-start-3 sm:col-end-13 sm:row-start-3 sm:row-end-4">
+      <div class="sm:col-start-3 sm:col-end-12 sm:row-start-3 sm:row-end-4">
         <label
           for="name"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -165,7 +180,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Year date -->
-      <div class="sm:col-start-1 sm:col-end-3 sm:row-start-4 sm:row-end-5">
+      <div class="sm:col-start-2 sm:col-end-4 sm:row-start-4 sm:row-end-5">
         <label
           for="year"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -183,7 +198,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! variations -->
-      <div class="sm:col-start-3 sm:col-end-4 sm:row-start-4 sm:row-end-5">
+      <div class="sm:col-start-4 sm:col-end-5 sm:row-start-4 sm:row-end-5">
         <label
           for="variations"
           class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -201,7 +216,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Dealer -->
-      <div class="sm:col-start-4 sm:col-end-7 sm:row-start-4 sm:row-end-5">
+      <div class="sm:col-start-5 sm:col-end-9 sm:row-start-4 sm:row-end-5">
         <label
           for="dealer"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -217,7 +232,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! price -->
-      <div class="sm:col-start-7 sm:col-end-9 sm:row-start-4 sm:row-end-5">
+      <div class="sm:col-start-9 sm:col-end-10 sm:row-start-4 sm:row-end-5">
         <label
           for="price"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -233,7 +248,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Currency -->
-      <div class="sm:col-start-9 sm:col-end-11 sm:row-start-4 sm:row-end-5">
+      <div class="sm:col-start-10 sm:col-end-11 sm:row-start-4 sm:row-end-5">
         <label
           for="currency"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -267,7 +282,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Width -->
-      <div class="sm:col-start-1 sm:col-end-3 sm:row-start-5 sm:row-end-6">
+      <div class="sm:col-start-2 sm:col-end-3 sm:row-start-5 sm:row-end-6">
         <label
           for="width"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -283,7 +298,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Height -->
-      <div class="sm:col-start-3 sm:col-end-5 sm:row-start-5 sm:row-end-6">
+      <div class="sm:col-start-3 sm:col-end-4 sm:row-start-5 sm:row-end-6">
         <label
           for="height"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -299,7 +314,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Depth -->
-      <div class="sm:col-start-5 sm:col-end-7 sm:row-start-5 sm:row-end-6">
+      <div class="sm:col-start-4 sm:col-end-5 sm:row-start-5 sm:row-end-6">
         <label
           for="depth"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -315,7 +330,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Location city-->
-      <div class="sm:col-start-7 sm:col-end-10 sm:row-start-5 sm:row-end-6">
+      <div class="sm:col-start-6 sm:col-end-9 sm:row-start-5 sm:row-end-6">
         <label
           for="city"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -331,7 +346,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Location country  -->
-      <div class="sm:col-start-10 sm:col-end-13 sm:row-start-5 sm:row-end-6">
+      <div class="sm:col-start-9 sm:col-end-12 sm:row-start-5 sm:row-end-6">
         <label
           for="location"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -347,7 +362,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Notes  -->
-      <div class="sm:col-start-1 sm:col-end-13 sm:row-start-6 sm:row-end-7">
+      <div class="sm:col-start-2 sm:col-end-12 sm:row-start-6 sm:row-end-7">
         <label
           for="description"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -752,29 +767,30 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         <label
           for="subject notes"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-          >film notes</label
+          >Transparency notes</label
         >
         <textarea
           v-model="artTransparencyNotes"
           id="subject notes"
-          rows="3"
+          rows="2"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-          placeholder="Write a description..."
+          placeholder="Transparency Notes..."
         >
-...film notes</textarea
+...Transparency notes</textarea
         >
       </div>
     </div>
     <!-- //! control buttons (update - delete - x)  -->
     <div class="flex items-center justify-end space-x-4">
       <button
-        @click="updateData"
+        @click="addData"
         type="submit"
-        class="rounded-lg border border-primary-700 px-5 py-2.5 text-center text-sm font-medium text-primary-700 hover:bg-primary-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+        class="rounded-lg border border-primary-700 px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-primary-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
       >
-        update
+        Add
       </button>
       <button
+      @click="deleteData"
         type="button"
         class="inline-flex items-center rounded-lg border border-red-600 px-5 py-2.5 text-center text-sm font-medium text-red-600 hover:bg-red-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
       >
@@ -796,7 +812,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
       <button
         type="button"
         class="inline-flex rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
-        @click="buttonClose"
+        @click=buttonHome
       >
         <svg
           aria-hidden="true"
@@ -819,6 +835,13 @@ const artTransparencyNotes = ref(""); // Transparency Notes
   <!-- //! pagination (out of body)-->
   <nav aria-label="Page navigation example">
     <ul class="mt-2 inline-flex -space-x-px">
+      <li>
+        <a
+          href="#"
+          class="ml-0 rounded-l-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >Prev</a
+        >
+      </li>
       <li>
         <a
           href="#"

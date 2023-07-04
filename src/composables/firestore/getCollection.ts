@@ -25,7 +25,7 @@ const getCollection = (col: string, xquery: string) => {
     colRef = query(collection(db, col), orderBy("index", "asc"), limit(40));
   }
 
-  console.log(colRef);
+  // console.log(colRef);
 
   const unsub = onSnapshot(colRef, (snapshot) => {
     let results: any = [];
