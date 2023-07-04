@@ -24,7 +24,7 @@ artTransparencyNumber.value = props.artworkList.transparencyNumber;
 // Photographed At
 const artPhotographedAt = ref(""); // Photographed At
 artPhotographedAt.value = props.productionLocation;
- // Background
+// Background
 const artBackground = ref(""); // Background
 artBackground.value = props.artworkList.background;
 // Accessories
@@ -56,7 +56,9 @@ artTransparencyNotes.value = props.artworkList.noteTransparency;
             class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
           >
             <!-- //! shooting year -->
-            <div class="sm:row-start- sm:col-start-1 sm:col-end-3 sm:row-end-2">
+            <div
+              class="sm:col-start-2 sm:col-end-4 sm:row-start-1 sm:row-end-2"
+            >
               <label
                 for="shooting_year"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -89,27 +91,26 @@ artTransparencyNotes.value = props.artworkList.noteTransparency;
                 placeholder="New York"
               />
             </div>
-            <!-- //! positive - radio button  -->
+            <!-- //! Accessories -->
             <div
-              class="sm:col-start-5 sm:col-end-6 sm:row-start-3 sm:row-end-4"
+              class="sm:col-start-6 sm:col-end-12 sm:row-start-1 sm:row-end-3"
             >
               <label
-                for="radio-4"
+                for="Accessories"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >positive</label
+                >accessories</label
               >
               <input
-                checked
-                id="radio-4"
-                type="radio"
-                value="false"
-                name="radio4"
-                class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+                v-model="artAccessories"
+                type="text"
+                id="Accessories"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="Description"
               />
             </div>
             <!-- //! film size -->
             <div
-              class="sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3"
+              class="sm:col-start-2 sm:col-end-4 sm:row-start-2 sm:row-end-3"
             >
               <label
                 for="film_size"
@@ -128,7 +129,6 @@ artTransparencyNotes.value = props.artworkList.noteTransparency;
                 <option value="digital">digital</option>
               </select>
             </div>
-
             <!-- //! number of film -->
             <div
               class="sm:col-start-5 sm:col-end-6 sm:row-start-2 sm:row-end-3"
@@ -149,15 +149,31 @@ artTransparencyNotes.value = props.artworkList.noteTransparency;
                 placeholder="1"
               />
             </div>
-
+            <!-- //! reproduced -->
+            <div
+              class="sm:col-start-6 sm:col-end-12 sm:row-start-2 sm:row-end-3"
+            >
+              <label
+                for="reproduced"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >reproduced</label
+              >
+              <input
+                v-model="artReproduced"
+                type="text"
+                id="reproduced"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                placeholder="Description"
+              />
+            </div>
             <!-- //! photographed  -->
             <div
-              class="sm:col-start-1 sm:col-end-4 sm:row-start-3 sm:row-end-4"
+              class="sm:col-start-2 sm:col-end-4 sm:row-start-3 sm:row-end-4"
             >
               <label
                 for="photographed"
                 class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >photographed at</label
+                >photographed</label
               >
               <select
                 v-model="artPhotographedAt"
@@ -170,10 +186,9 @@ artTransparencyNotes.value = props.artworkList.noteTransparency;
                 <option value="other">other</option>
               </select>
             </div>
-
             <!-- //! location city -->
             <div
-              class="sm:col-start-1 sm:col-end-4 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-4 sm:col-end-6 sm:row-start-3 sm:row-end-4"
             >
               <label
                 for="shootingCity"
@@ -191,7 +206,7 @@ artTransparencyNotes.value = props.artworkList.noteTransparency;
             </div>
             <!-- //! background -->
             <div
-              class="sm:col-start-5 sm:col-end-12 sm:row-start-4 sm:row-end-5"
+              class="sm:col-start-6 sm:col-end-12 sm:row-start-3 sm:row-end-4"
             >
               <label
                 for="background"
@@ -207,46 +222,9 @@ artTransparencyNotes.value = props.artworkList.noteTransparency;
                 placeholder="Description"
               />
             </div>
-
-            <!-- //! Accessories -->
-            <div
-              class="sm:col-start-7 sm:col-end-12 sm:row-start-1 sm:row-end-3"
-            >
-              <label
-                for="Accessories"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >accessories</label
-              >
-              <input
-                v-model="artAccessories"
-                type="text"
-                id="Accessories"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="Description"
-              />
-            </div>
-
-            <!-- //! reproduced -->
-            <div
-              class="sm:col-start-7 sm:col-end-12 sm:row-start-2 sm:row-end-3"
-            >
-              <label
-                for="reproduced"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >reproduced</label
-              >
-              <input
-                v-model="artReproduced"
-                type="text"
-                id="reproduced"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-                placeholder="Description"
-              />
-            </div>
-
             <!-- //! film notes  -->
             <div
-              class="sm:row-end-9 sm:row-start-8 sm:col-start-1 sm:col-end-12"
+              class="sm:row-end-9 sm:row-start-8 sm:col-start-2 sm:col-end-12"
             >
               <label
                 for="subject notes"

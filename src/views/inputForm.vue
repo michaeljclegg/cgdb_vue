@@ -81,21 +81,20 @@ const artShootingDate = ref(""); // Shooting Date
 //Shooting City
 const artShootingCity = ref(""); // Shooting City
 // Transparency Size
-const artTransparencySize = ref(""); // Transparency 
+const artTransparencySize = ref(""); // Transparency
 //Transparency Number
 const artTransparencyNumber = ref(""); // Transparency Number
 // Photographed At
 const artPhotographedAt = ref(""); // Photographed At
- // Background
- const artBackground = ref(""); // Background
- // Accessories
+// Background
+const artBackground = ref(""); // Background
+// Accessories
 const artAccessories = ref(""); // Accessories
 //Reproduced
 const artReproduced = ref(""); // Reproduced
 // Transparency Notes
 const artTransparencyNotes = ref(""); // Transparency Notes
 // console.log(typeof numIndex);
-
 </script>
 
 <template>
@@ -111,18 +110,26 @@ const artTransparencyNotes = ref(""); // Transparency Notes
     <div
       class="mb-4 grid gap-x-4 gap-y-3 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
     >
-      D
+     <!--//! Thumbnail -->
+     <figure
+              class="max-w-xs sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3"
+            >
+              <img
+                class="h-auto"
+                src="@\assets\images\The_Cigar_Eaters_1983TN100.jpg"
+                alt="The Cigar Eaters, 1983"
+              />
+            </figure>
       <!-- //! Title  -->
       <div class="sm:col-start-4 sm:col-end-13 sm:row-start-1 sm:row-end-3">
         <textarea
           v-model="artTitle"
           id="title"
-          rows="2"
+          rows="3"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-400 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
           placeholder="Enter / Edit TITLE OF ARTWORK."
         ></textarea>
       </div>
-
       <!-- //! index -->
       <div class="sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4">
         <label
@@ -157,7 +164,6 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="ID Name."
         />
       </div>
-
       <!-- //! Year date -->
       <div class="sm:col-start-1 sm:col-end-3 sm:row-start-4 sm:row-end-5">
         <label
@@ -176,7 +182,6 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="1980"
         />
       </div>
-
       <!-- //! variations -->
       <div class="sm:col-start-3 sm:col-end-4 sm:row-start-4 sm:row-end-5">
         <label
@@ -195,7 +200,6 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="1"
         />
       </div>
-
       <!-- //! Dealer -->
       <div class="sm:col-start-4 sm:col-end-7 sm:row-start-4 sm:row-end-5">
         <label
@@ -228,7 +232,6 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="00,000"
         />
       </div>
-
       <!-- //! Currency -->
       <div class="sm:col-start-9 sm:col-end-11 sm:row-start-4 sm:row-end-5">
         <label
@@ -247,7 +250,6 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           <option value="other">₪ other</option>
         </select>
       </div>
-
       <!-- //! sold - radio button  -->
       <div class="sm:col-start-11 sm:col-end-12 sm:row-start-4 sm:row-end-5">
         <label
@@ -264,9 +266,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
         />
       </div>
-
       <!-- //! Width -->
-      <div class="sm:col-start-1 sm:col-end-3 sm:row-start-6 sm:row-end-7">
+      <div class="sm:col-start-1 sm:col-end-3 sm:row-start-5 sm:row-end-6">
         <label
           for="width"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -282,7 +283,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Height -->
-      <div class="sm:col-start-3 sm:col-end-5 sm:row-start-6 sm:row-end-7">
+      <div class="sm:col-start-3 sm:col-end-5 sm:row-start-5 sm:row-end-6">
         <label
           for="height"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -298,7 +299,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Depth -->
-      <div class="sm:col-start-5 sm:col-end-7 sm:row-start-6 sm:row-end-7">
+      <div class="sm:col-start-5 sm:col-end-7 sm:row-start-5 sm:row-end-6">
         <label
           for="depth"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -313,9 +314,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="00"
         />
       </div>
-
       <!-- //! Location city-->
-      <div class="sm:col-start-7 sm:col-end-10 sm:row-start-6 sm:row-end-7">
+      <div class="sm:col-start-7 sm:col-end-10 sm:row-start-5 sm:row-end-6">
         <label
           for="city"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -331,7 +331,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Location country  -->
-      <div class="sm:col-start-10 sm:col-end-13 sm:row-start-6 sm:row-end-7">
+      <div class="sm:col-start-10 sm:col-end-13 sm:row-start-5 sm:row-end-6">
         <label
           for="location"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -346,9 +346,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="Location Country"
         />
       </div>
-
       <!-- //! Notes  -->
-      <div class="sm:row-end-8 sm:col-start-1 sm:col-end-13 sm:row-start-7">
+      <div class="sm:col-start-1 sm:col-end-13 sm:row-start-6 sm:row-end-7">
         <label
           for="description"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -364,9 +363,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
 <div class="Note"></div></textarea
         >
       </div>
-
       <!-- //! material -->
-      <div class="sm:row-start-9 sm:row-end-10 sm:col-start-2 sm:col-end-5">
+      <div class="sm:row-end-8 sm:col-start-2 sm:col-end-5 sm:row-start-7">
         <label
           for="material"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -384,7 +382,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         </select>
       </div>
       <!-- //! framed - radio button  -->
-      <div class="sm:row-start-9 sm:row-end-10 sm:col-start-6 sm:col-end-7">
+      <div class="sm:row-end-8 sm:col-start-6 sm:col-end-7 sm:row-start-7">
         <label
           for="radio-2"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -400,7 +398,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! Gener -->
-      <div class="sm:row-start-9 sm:row-end-10 sm:col-start-9 sm:col-end-12">
+      <div class="sm:row-end-8 sm:col-start-9 sm:col-end-12 sm:row-start-7">
         <label
           for="gener"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -419,7 +417,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         </select>
       </div>
       <!-- //! mounting -->
-      <div class="sm:row-start-10 sm:row-end-11 sm:col-start-2 sm:col-end-5">
+      <div class="sm:row-start-8 sm:row-end-9 sm:col-start-2 sm:col-end-5">
         <label
           for="mounting"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -436,7 +434,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         </select>
       </div>
       <!-- //! Laminated - radio button  -->
-      <div class="sm:row-start-11 sm:row-end-12 sm:col-start-6 sm:col-end-7">
+      <div class="sm:row-start-8 sm:row-end-9 sm:col-start-6 sm:col-end-7">
         <label
           for="radio-2"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -452,7 +450,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! category -->
-      <div class="sm:col-start-9 sm:col-end-12 sm:row-start-10 sm:row-end-11">
+      <div class="sm:row-start-8 sm:row-end-9 sm:col-start-9 sm:col-end-12">
         <label
           for="category"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -470,7 +468,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         </select>
       </div>
       <!-- //! condition -->
-      <div class="sm:row-start-11 sm:row-end-12 sm:col-start-2 sm:col-end-5">
+      <div class="sm:row-start-9 sm:row-end-10 sm:col-start-2 sm:col-end-5">
         <label
           for="condition"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -487,9 +485,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           <option value="damaged">damaged</option>
         </select>
       </div>
-
       <!-- //! number of sitters -->
-      <div class="sm:col-start-6 sm:col-end-7 sm:row-start-11 sm:row-end-12">
+      <div class="sm:row-start-9 sm:row-end-10 sm:col-start-6 sm:col-end-7">
         <label
           for="sitters"
           class="input_num mb-2 block text-center text-sm font-medium text-gray-900 dark:text-white"
@@ -506,8 +503,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="1"
         />
       </div>
-         <!-- //! type -->
-         <div class="sm:col-start-9 sm:col-end-12 sm:row-start-11 sm:row-end-12">
+      <!-- //! type -->
+      <div class="sm:row-start-9 sm:row-end-10 sm:col-start-9 sm:col-end-12">
         <label
           for="type"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -524,7 +521,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         </select>
       </div>
       <!-- //! location city -->
-      <div class="sm:col-start-2 sm:col-end-5 sm:row-start-12 sm:row-end-13">
+      <div class="sm:row-start-10 sm:row-end-11 sm:col-start-2 sm:col-end-5">
         <label
           for="locationCity"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -540,7 +537,7 @@ const artTransparencyNotes = ref(""); // Transparency Notes
         />
       </div>
       <!-- //! panels -->
-      <div class="sm:col-start-6 sm:col-end-7 sm:row-start-12 sm:row-end-13">
+      <div class="sm:row-start-10 sm:row-end-11 sm:col-start-6 sm:col-end-7">
         <label
           for="panels"
           class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -557,8 +554,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           placeholder="1"
         />
       </div>
-         <!-- //! sub type -->
-      <div class="sm:col-start-9 sm:col-end-12 sm:row-start-12 sm:row-end-13">
+      <!-- //! sub type -->
+      <div class="sm:row-start-10 sm:row-end-11 sm:col-start-9 sm:col-end-12">
         <label
           for="sub type"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -584,9 +581,8 @@ const artTransparencyNotes = ref(""); // Transparency Notes
           <option value="children">children</option>
         </select>
       </div>
-
-      <!-- //! Notes  -->
-      <div class="sm:row-end-9 sm:row-start-8 sm:col-start-13 sm:col-end-14">
+      <!-- //! Print Notes  -->
+      <div class="sm:row-end-12 sm:row-start-11 sm:col-start-2 sm:col-end-12">
         <label
           for="description"
           class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -602,8 +598,173 @@ const artTransparencyNotes = ref(""); // Transparency Notes
 ...Notes related to Print</textarea
         >
       </div>
+      <!-- //! shooting year -->
+      <div class="sm:col-start-2 sm:col-end-4 sm:row-start-12 sm:row-end-13">
+        <label
+          for="shooting_year"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >shooting date</label
+        >
+        <input
+          v-model="artShootingDate"
+          type="text"
+          name="shooting_year"
+          id="shooting_year"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="1980"
+        />
+      </div>
+      <!-- //!  place -->
+      <div class="sm:col-start-4 sm:col-end-6 sm:row-start-12 sm:row-end-13">
+        <label
+          for="shooting_place"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >... place</label
+        >
+        <input
+          type="text"
+          name="shooting_place"
+          id="shooting_place"
+          value=""
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="New York"
+        />
+      </div>
+      <!-- //! Accessories -->
+      <div class="sm:col-start-6 sm:col-end-12 sm:row-start-12 sm:row-end-13">
+        <label
+          for="Accessories"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >accessories</label
+        >
+        <input
+          v-model="artAccessories"
+          type="text"
+          id="Accessories"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="Description"
+        />
+      </div>
+      <!-- //! film size -->
+      <div class="sm:col-start-2 sm:col-end-4 sm:row-start-13 sm:row-end-14">
+        <label
+          for="film_size"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >film size</label
+        >
+        <select
+          v-model="artTransparencySize"
+          id="film_size"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+        >
+          <option value="4x5">4x5</option>
+          <option value="5x7">5x7</option>
+          <option value="8x10">8x10</option>
+          <option value="35mm">35mm</option>
+          <option value="digital">digital</option>
+        </select>
+      </div>
+      <!-- //! number of film -->
+      <div class="sm:col-start-5 sm:col-end-6 sm:row-start-13 sm:row-end-14">
+        <label
+          for="variations"
+          class="input_num mb-2 block text-center text-sm font-medium text-gray-900 dark:text-white"
+          >number</label
+        >
+        <input
+          type="number"
+          v-model="artTransparencyNumber"
+          min="1"
+          max="20"
+          name="film_num"
+          id="film_num"
+          class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="1"
+        />
+      </div>
+      <!-- //! reproduced -->
+      <div class="sm:col-start-6 sm:col-end-12 sm:row-start-13 sm:row-end-14">
+        <label
+          for="reproduced"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >reproduced</label
+        >
+        <input
+          v-model="artReproduced"
+          type="text"
+          id="reproduced"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="Description"
+        />
+      </div>
+      <!-- //! photographed  -->
+      <div class="sm:col-start-2 sm:col-end-4 sm:row-start-14 sm:row-end-15">
+        <label
+          for="photographed"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >photographed</label
+        >
+        <select
+          v-model="artPhotographedAt"
+          id="photographed"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+        >
+          <option value="subject">subject</option>
+          <option value="studio">studio</option>
+          <option value="outdoor">outdoor</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+      <!-- //! location city -->
+      <div class="sm:col-start-4 sm:col-end-6 sm:row-start-14 sm:row-end-15">
+        <label
+          for="shootingCity"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >shooting city</label
+        >
+        <input
+          v-model="artShootingCity"
+          type="text"
+          name="shootingCity"
+          id="shootingCity"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="New York"
+        />
+      </div>
+      <!-- //! background -->
+      <div class="sm:col-start-6 sm:col-end-12 sm:row-start-14 sm:row-end-15">
+        <label
+          for="background"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >background</label
+        >
+        <input
+          v-model="artBackground"
+          id="background"
+          type="text"
+          name="background"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="Description"
+        />
+      </div>
+      <!-- //! film notes  -->
+      <div class="sm:row-end-16 sm:row-start-15 sm:col-start-2 sm:col-end-12">
+        <label
+          for="subject notes"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >film notes</label
+        >
+        <textarea
+          v-model="artTransparencyNotes"
+          id="subject notes"
+          rows="3"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          placeholder="Write a description..."
+        >
+...film notes</textarea
+        >
+      </div>
     </div>
-
     <!-- //! control buttons (update - delete - x)  -->
     <div class="flex items-center justify-end space-x-4">
       <button
