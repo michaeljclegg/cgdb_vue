@@ -30,10 +30,10 @@ artBackground.value = props.artworkList.background;
 // Accessories
 const artAccessories = ref(""); // Accessories
 artAccessories.value = props.artworkList.accessories;
-
+//Reproduced
 const artReproduced = ref(""); // Reproduced
 artReproduced.value = props.artworkList.reproduced;
-
+// Transparency Notes
 const artTransparencyNotes = ref(""); // Transparency Notes
 artTransparencyNotes.value = props.artworkList.noteTransparency;
 </script>

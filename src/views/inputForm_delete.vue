@@ -47,7 +47,7 @@ const artDealer = ref("");
 artDealer.value = props.artworkList.dealer;
 // Price
 const artPrice = ref(""); 
-artPrice.value = props.artworkList.price;
+artPrice.value = props.artwork
 const numPrice = Number(artPrice.value);
 // Currency
 const artCurrency = ref(""); 
@@ -377,7 +377,7 @@ artNote.value = props.artworkList.noteDetails;
               <textarea
                 v-model="artNote"
                 id="description"
-                rows="5"
+                rows="2"
                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="Write a description..."
               >

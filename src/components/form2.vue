@@ -10,13 +10,13 @@ const props = defineProps(["artworkList"]);
 
 // NOTE list of all variables for form 1 (Artwork)
 //Material
-const artMaterial = ref(""); 
+const artMaterial = ref("");
 artMaterial.value = props.artworkList.material;
 // Framed
-const artFramed = ref(""); 
+const artFramed = ref("");
 artFramed.value = props.artworkList.framed;
 // Gener
-const artGener = ref(""); 
+const artGener = ref("");
 artGener.value = props.artworkList.gener;
 // Mounting
 const artMounting = ref(""); // Mounting
@@ -145,7 +145,6 @@ artPrintNotes.value = props.artworkList.notePrint;
                 <option value="other">Unmounted</option>
               </select>
             </div>
-
             <!-- //! Laminated - radio button  -->
             <div
               class="sm:col-start-6 sm:col-end-7 sm:row-start-2 sm:row-end-3"
@@ -163,6 +162,26 @@ artPrintNotes.value = props.artworkList.notePrint;
                 name="radio2"
                 class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
               />
+            </div>
+            <!-- //! category -->
+            <div
+              class="sm:col-start-9 sm:col-end-12 sm:row-start-2 sm:row-end-3"
+            >
+              <label
+                for="category"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >category</label
+              >
+              <select
+                v-model="artCategory"
+                id="category"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+              >
+                <option selected="fictional">fictional</option>
+                <option value="commissioned">commissioned</option>
+                <option value="rejected">rejected</option>
+                <option value="collaboration">collaboration</option>
+              </select>
             </div>
             <!-- //! condition -->
             <div
@@ -184,7 +203,6 @@ artPrintNotes.value = props.artworkList.notePrint;
                 <option value="damaged">damaged</option>
               </select>
             </div>
-
             <!-- //! number of sitters -->
             <div
               class="sm:col-start-6 sm:col-end-7 sm:row-start-3 sm:row-end-4"
@@ -204,6 +222,25 @@ artPrintNotes.value = props.artworkList.notePrint;
                 class="input_num block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-center text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
                 placeholder="1"
               />
+            </div>
+            <!-- //! type -->
+            <div
+              class="sm:col-start-9 sm:col-end-12 sm:row-start-3 sm:row-end-4"
+            >
+              <label
+                for="type"
+                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                >type</label
+              >
+              <select
+                id="type"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+              >
+                <option selected="single portrait">single portrait</option>
+                <option value="double portrait">double portrait</option>
+                <option value="triple portrait">triple portrait</option>
+                <option value="group portrait">group portrait</option>
+              </select>
             </div>
             <!-- //! location city -->
             <div
@@ -244,45 +281,6 @@ artPrintNotes.value = props.artworkList.notePrint;
               />
             </div>
 
-            <!-- //! category -->
-            <div
-              class="sm:col-start-9 sm:col-end-12 sm:row-start-2 sm:row-end-3"
-            >
-              <label
-                for="category"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >category</label
-              >
-              <select
-                v-model="artCategory"
-                id="category"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-              >
-                <option selected="fictional">fictional</option>
-                <option value="commissioned">commissioned</option>
-                <option value="rejected">rejected</option>
-                <option value="collaboration">collaboration</option>
-              </select>
-            </div>
-            <!-- //! type -->
-            <div
-              class="sm:col-start-9 sm:col-end-12 sm:row-start-3 sm:row-end-4"
-            >
-              <label
-                for="type"
-                class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-                >type</label
-              >
-              <select
-                id="type"
-                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
-              >
-                <option selected="single portrait">single portrait</option>
-                <option value="double portrait">double portrait</option>
-                <option value="triple portrait">triple portrait</option>
-                <option value="group portrait">group portrait</option>
-              </select>
-            </div>
             <!-- //! sub type -->
             <div
               class="sm:col-start-9 sm:col-end-12 sm:row-start-4 sm:row-end-5"
