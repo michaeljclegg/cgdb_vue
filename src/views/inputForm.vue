@@ -2,10 +2,17 @@
 import { useCollection } from "../stores/collection";
 import { ref, watchEffect, onMounted } from "vue";
 import  router from "../router";
+import { Unit, User, AsyncState } from '../types'
+// import { User, Image, AsyncState, Artwork } from "../types";
 
-const buttonHome = () => {
-  router.push('/');
-}
+// example of usage - not applicable to db.
+const me = ref<User>({
+  id: "user",
+  avatar: "/avatar.jpg",
+  name: "You",
+});
+
+const state = AsyncState.isPending
 // import artworks from "@/components/artworks.vue";
 // import useLowerCase from "@/composables/firestore/useLowerCase";
 
@@ -19,10 +26,26 @@ onMounted(() => {
   //   console.log("artwork2: ", col.artwork );
 });
 
+//list of variables in C&G db
 const artworkList = ref({});
 artworkList.value = col.artwork;
+
+const buttonHome = () => {
+  router.push('/');
+}
+
+ 
+function showOtherUnit(quantity: number, message: Unit): void {
+  console.log(quantity, message);
+  // if cm then convert to inch
+// else if inch conver to centemerts
+//display result
+}
+ 
+showOtherUnit(40, 'cm');
+
+// FIX 
 // NOTE list of all variables for form 1 (Artwork)
-//! Title
 const artTitle = ref("");
 // Index
 const artIndex = ref("");
