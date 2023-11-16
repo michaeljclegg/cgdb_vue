@@ -2,6 +2,7 @@ a
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 import { ref } from "vue";
+import Nav from "@/components/nav.vue";
 //get collection test
 //next two lines can be removed - testing collection
 import { getDocs, collection, getFirestore, doc } from "firebase/firestore";
@@ -23,19 +24,17 @@ getDocs(colRef)
 </script>
 
 <template>
-  <div class="text-gray-600 text-1xl font-bold">document count:{{ cgDocs }}</div>
-  <div class="mx-6 grid h-screen grid-cols-11 grid-rows-6">
+  <Nav/>
+  <div class="font-bold text-gray-600 text-1xl">document count:{{ cgDocs }}</div>
+  <div class="grid h-screen grid-cols-11 grid-rows-6 mx-6">
     <div
-      class="col-start-6 row-start-2 mb-4 self-end justify-self-center text-4xl text-red-800"
+      class="self-end col-start-6 row-start-2 mb-4 text-4xl text-red-800 justify-self-center"
     >
       home
+
     </div>
     
-    <RouterLink
-    :to="{ name: 'numbers' }"
-    class="btn_trans col-start-6 row-start-3 self-start justify-self-center"
-    >numbers</RouterLink
-    >
+  
   </div>
 </template>
 

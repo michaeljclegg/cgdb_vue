@@ -19,14 +19,10 @@ import { RouterLink } from "vue-router";
         class="flex items-center gap-3 text-[20px]"
         >input</RouterLink
       >
-      <RouterLink
-        :to="{ name: 'test' }"
-        class="flex items-center gap-3 text-[20px]"
-        >artworks</RouterLink
-      >
-      <RouterLink :to="{ name: 'about' }">
-        <div class="flex items-center gap-3 text-[20px]">about</div>
+      <RouterLink :to="{ name: 'list' }">
+        <div class="flex items-center gap-3 text-[20px]">list</div>
       </RouterLink>
+
     </nav>
   </header>
 </template>

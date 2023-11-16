@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { useCollection } from "../stores/collection";
 import { ref, watchEffect, onMounted } from "vue";
-import  router from "../router";
-import { Unit, User, AsyncState } from '../types'
+import { useRouter } from 'vue-router'
+// import { Unit, User } from '../types/index'
 // import { User, Image, AsyncState, Artwork } from "../types";
-
+const router = useRouter()
 // example of usage - not applicable to db.
 const me = ref<User>({
   id: "user",
@@ -12,7 +12,8 @@ const me = ref<User>({
   name: "You",
 });
 
-const state = AsyncState.isPending
+// const state = AsyncState.loading
+
 // import artworks from "@/components/artworks.vue";
 // import useLowerCase from "@/composables/firestore/useLowerCase";
 
@@ -35,14 +36,14 @@ const buttonHome = () => {
 }
 
  
-function showOtherUnit(quantity: number, message: Unit): void {
-  console.log(quantity, message);
-  // if cm then convert to inch
-// else if inch conver to centemerts
-//display result
-}
+// function showOtherUnit(quantity: number, message: Unit): void {
+//   console.log(quantity, message);
+//   // if cm then convert to inch
+// // else if inch conver to centemerts
+// //display result
+// }
  
-showOtherUnit(40, 'cm');
+// showOtherUnit(40, 'cm');
 
 // FIX 
 // NOTE list of all variables for form 1 (Artwork)
@@ -82,7 +83,7 @@ const artNote = ref("");
 const artMaterial = ref("");
 // Framed
 const artFramed = ref("");
-// Gener
+// Genre
 const artGener = ref("");
 // Mounting
 const artMounting = ref(""); // Mounting
@@ -137,7 +138,7 @@ const deleteData =  () => {
 <template>
   <!-- Modal toggle -->
   <!-- //! Navigation buttons (artwork - prints - details - image)-->
-  <div class="my-5 flex justify-center ">
+  <div class="flex justify-center my-5 ">
     <!-- relative h-full w-full max-w-2xl p-2 -->
     <!--  artwork -->
   </div>
@@ -146,7 +147,7 @@ const deleteData =  () => {
   <form action="#">
     <!-- //! grid -->
     <div
-      class="mb-4 grid gap-x-4 gap-y-2 rounded bg-gray-200 p-2 dark:bg-gray-700 sm:grid-cols-12"
+      class="grid p-2 mb-4 bg-gray-200 rounded gap-x-4 gap-y-2 dark:bg-gray-700 sm:grid-cols-12"
     >
      <!--//! Thumbnail -->
      <figure
@@ -172,7 +173,7 @@ const deleteData =  () => {
       <div class="sm:col-start-2 sm:col-end-3 sm:row-start-3 sm:row-end-4">
         <label
           for="index"
-          class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 input_num dark:text-white"
           >index</label
         >
         <input
@@ -190,7 +191,7 @@ const deleteData =  () => {
       <div class="sm:col-start-3 sm:col-end-12 sm:row-start-3 sm:row-end-4">
         <label
           for="name"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >id name</label
         >
         <input
@@ -206,7 +207,7 @@ const deleteData =  () => {
       <div class="sm:col-start-2 sm:col-end-4 sm:row-start-4 sm:row-end-5">
         <label
           for="year"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >year</label
         >
         <input
@@ -224,7 +225,7 @@ const deleteData =  () => {
       <div class="sm:col-start-4 sm:col-end-5 sm:row-start-4 sm:row-end-5">
         <label
           for="variations"
-          class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 input_num dark:text-white"
           >variations</label
         >
         <input
@@ -242,7 +243,7 @@ const deleteData =  () => {
       <div class="sm:col-start-5 sm:col-end-9 sm:row-start-4 sm:row-end-5">
         <label
           for="dealer"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >dealer</label
         >
         <input
@@ -258,7 +259,7 @@ const deleteData =  () => {
       <div class="sm:col-start-9 sm:col-end-10 sm:row-start-4 sm:row-end-5">
         <label
           for="price"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >price</label
         >
         <input
@@ -274,7 +275,7 @@ const deleteData =  () => {
       <div class="sm:col-start-10 sm:col-end-11 sm:row-start-4 sm:row-end-5">
         <label
           for="currency"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >currency</label
         >
         <select
@@ -292,7 +293,7 @@ const deleteData =  () => {
       <div class="sm:col-start-11 sm:col-end-12 sm:row-start-4 sm:row-end-5">
         <label
           for="radio-2"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >sold</label
         >
         <input
@@ -301,14 +302,14 @@ const deleteData =  () => {
           id="radio-2"
           type="radio"
           name="radio2"
-          class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
         />
       </div>
       <!-- //! Width -->
       <div class="sm:col-start-2 sm:col-end-3 sm:row-start-5 sm:row-end-6">
         <label
           for="width"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >width</label
         >
         <input
@@ -324,7 +325,7 @@ const deleteData =  () => {
       <div class="sm:col-start-3 sm:col-end-4 sm:row-start-5 sm:row-end-6">
         <label
           for="height"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >height</label
         >
         <input
@@ -340,7 +341,7 @@ const deleteData =  () => {
       <div class="sm:col-start-4 sm:col-end-5 sm:row-start-5 sm:row-end-6">
         <label
           for="depth"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >depth</label
         >
         <input
@@ -356,7 +357,7 @@ const deleteData =  () => {
       <div class="sm:col-start-6 sm:col-end-9 sm:row-start-5 sm:row-end-6">
         <label
           for="city"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >city</label
         >
         <input
@@ -372,7 +373,7 @@ const deleteData =  () => {
       <div class="sm:col-start-9 sm:col-end-12 sm:row-start-5 sm:row-end-6">
         <label
           for="location"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >country</label
         >
         <input
@@ -388,7 +389,7 @@ const deleteData =  () => {
       <div class="sm:col-start-2 sm:col-end-12 sm:row-start-6 sm:row-end-7">
         <label
           for="description"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >notes</label
         >
         <textarea
@@ -405,7 +406,7 @@ const deleteData =  () => {
       <div class="sm:row-end-8 sm:col-start-2 sm:col-end-5 sm:row-start-7">
         <label
           for="material"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >material</label
         >
         <select
@@ -423,7 +424,7 @@ const deleteData =  () => {
       <div class="sm:row-end-8 sm:col-start-6 sm:col-end-7 sm:row-start-7">
         <label
           for="radio-2"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >framed</label
         >
         <input
@@ -432,14 +433,14 @@ const deleteData =  () => {
           id="radio-2"
           type="radio"
           name="radio2"
-          class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
         />
       </div>
       <!-- //! Gener -->
       <div class="sm:row-end-8 sm:col-start-9 sm:col-end-12 sm:row-start-7">
         <label
           for="gener"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >gener</label
         >
         <select
@@ -458,7 +459,7 @@ const deleteData =  () => {
       <div class="sm:row-start-8 sm:row-end-9 sm:col-start-2 sm:col-end-5">
         <label
           for="mounting"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >mounting</label
         >
         <select
@@ -475,7 +476,7 @@ const deleteData =  () => {
       <div class="sm:row-start-8 sm:row-end-9 sm:col-start-6 sm:col-end-7">
         <label
           for="radio-2"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >laminated</label
         >
         <input
@@ -484,14 +485,14 @@ const deleteData =  () => {
           type="radio"
           value="false"
           name="radio2"
-          class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
         />
       </div>
       <!-- //! category -->
       <div class="sm:row-start-8 sm:row-end-9 sm:col-start-9 sm:col-end-12">
         <label
           for="category"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >category</label
         >
         <select
@@ -509,7 +510,7 @@ const deleteData =  () => {
       <div class="sm:row-start-9 sm:row-end-10 sm:col-start-2 sm:col-end-5">
         <label
           for="condition"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >condition</label
         >
         <select
@@ -527,7 +528,7 @@ const deleteData =  () => {
       <div class="sm:row-start-9 sm:row-end-10 sm:col-start-6 sm:col-end-7">
         <label
           for="sitters"
-          class="input_num mb-2 block text-center text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-center text-gray-900 input_num dark:text-white"
           >sitters</label
         >
         <input
@@ -545,7 +546,7 @@ const deleteData =  () => {
       <div class="sm:row-start-9 sm:row-end-10 sm:col-start-9 sm:col-end-12">
         <label
           for="type"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >type</label
         >
         <select
@@ -562,7 +563,7 @@ const deleteData =  () => {
       <div class="sm:row-start-10 sm:row-end-11 sm:col-start-2 sm:col-end-5">
         <label
           for="locationCity"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >location city</label
         >
         <input
@@ -578,7 +579,7 @@ const deleteData =  () => {
       <div class="sm:row-start-10 sm:row-end-11 sm:col-start-6 sm:col-end-7">
         <label
           for="panels"
-          class="input_num mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 input_num dark:text-white"
           >panels</label
         >
         <input
@@ -596,7 +597,7 @@ const deleteData =  () => {
       <div class="sm:row-start-10 sm:row-end-11 sm:col-start-9 sm:col-end-12">
         <label
           for="sub type"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >sub type</label
         >
         <select
@@ -623,7 +624,7 @@ const deleteData =  () => {
       <div class="sm:row-end-12 sm:row-start-11 sm:col-start-2 sm:col-end-12">
         <label
           for="description"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >print notes</label
         >
         <textarea
@@ -640,7 +641,7 @@ const deleteData =  () => {
       <div class="sm:col-start-2 sm:col-end-4 sm:row-start-12 sm:row-end-13">
         <label
           for="shooting_year"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >shooting date</label
         >
         <input
@@ -656,7 +657,7 @@ const deleteData =  () => {
       <div class="sm:col-start-4 sm:col-end-6 sm:row-start-12 sm:row-end-13">
         <label
           for="shooting_place"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >... place</label
         >
         <input
@@ -672,7 +673,7 @@ const deleteData =  () => {
       <div class="sm:col-start-6 sm:col-end-12 sm:row-start-12 sm:row-end-13">
         <label
           for="Accessories"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >accessories</label
         >
         <input
@@ -687,7 +688,7 @@ const deleteData =  () => {
       <div class="sm:col-start-2 sm:col-end-4 sm:row-start-13 sm:row-end-14">
         <label
           for="film_size"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >film size</label
         >
         <select
@@ -706,7 +707,7 @@ const deleteData =  () => {
       <div class="sm:col-start-5 sm:col-end-6 sm:row-start-13 sm:row-end-14">
         <label
           for="variations"
-          class="input_num mb-2 block text-center text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-center text-gray-900 input_num dark:text-white"
           >number</label
         >
         <input
@@ -724,7 +725,7 @@ const deleteData =  () => {
       <div class="sm:col-start-6 sm:col-end-12 sm:row-start-13 sm:row-end-14">
         <label
           for="reproduced"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >reproduced</label
         >
         <input
@@ -739,7 +740,7 @@ const deleteData =  () => {
       <div class="sm:col-start-2 sm:col-end-4 sm:row-start-14 sm:row-end-15">
         <label
           for="photographed"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >photographed</label
         >
         <select
@@ -757,7 +758,7 @@ const deleteData =  () => {
       <div class="sm:col-start-4 sm:col-end-6 sm:row-start-14 sm:row-end-15">
         <label
           for="shootingCity"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >shooting city</label
         >
         <input
@@ -773,7 +774,7 @@ const deleteData =  () => {
       <div class="sm:col-start-6 sm:col-end-12 sm:row-start-14 sm:row-end-15">
         <label
           for="background"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >background</label
         >
         <input
@@ -789,7 +790,7 @@ const deleteData =  () => {
       <div class="sm:row-end-16 sm:row-start-15 sm:col-start-2 sm:col-end-12">
         <label
           for="subject notes"
-          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >Transparency notes</label
         >
         <textarea
@@ -818,7 +819,7 @@ const deleteData =  () => {
         class="inline-flex items-center rounded-lg border border-red-600 px-5 py-2.5 text-center text-sm font-medium text-red-600 hover:bg-red-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
       >
         <svg
-          class="-ml-1 mr-1 h-5 w-5"
+          class="w-5 h-5 mr-1 -ml-1"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -839,7 +840,7 @@ const deleteData =  () => {
       >
         <svg
           aria-hidden="true"
-          class="h-5 w-5"
+          class="w-5 h-5"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -857,25 +858,25 @@ const deleteData =  () => {
 
   <!-- //! pagination (out of body)-->
   <nav aria-label="Page navigation example">
-    <ul class="mt-2 inline-flex -space-x-px">
+    <ul class="inline-flex mt-2 -space-x-px">
       <li>
         <a
           href="#"
-          class="ml-0 rounded-l-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
           >Prev</a
         >
       </li>
       <li>
         <a
           href="#"
-          class="border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
           >5</a
         >
       </li>
       <li>
         <a
           href="#"
-          class="rounded-r-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
           >Next</a
         >
       </li>

@@ -3,9 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ViewAuth from "../views/auth/ViewAuth.vue";
 import inputForm from "../views/inputForm.vue";
 import displayForm from "../views/displayForm.vue";
-import main from '../layouts/main.vue';
-import blank from '../layouts/blank.vue';
-import center from '../layouts/center.vue';
+import list from "../views/list.vue";
+
 
 // import { auth } from "../firebase/index.js";
 
@@ -26,75 +25,32 @@ const routes = [
     path: '/',
     name: 'home',
     component: () => import('../views/Home.vue'),
-    meta: {
-      layout: main
-    }
-    // beforeEnter: requireAuth,
   },
   {
     path: "/auth",
     name: "auth",
     component: ViewAuth,
-    meta: {
-      layout: blank
-    }
   },
   {
     path: "/input",
     name: "input",
     component: inputForm,
-    meta: {
-      layout: blank
-    }
   },
   {
     path: "/display",
     name: "display",
-    component: displayForm,
-    meta: {
-      layout: blank
-    }
+    component: displayForm
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/About.vue'),
-    meta: {
-      layout: center
-    }
-  },
-  {
-    path: '/numbers',
-    name: 'numbers',
-    component: () => import('../views/Numbers.vue'),
-    meta: {
-      layout: blank
-    }
-  },
-  {
-    path: '/test',
-    name: 'test',
-    component: () => import('../views/test.vue'),
-    meta: {
-      layout: blank
-    }
+    path: '/list',
+    name: 'list',
+    component: list,
   },
   {
     path: "/:catchAll(.*)",
     name: "404",
     component: () => import('../views/404.vue'),
-    meta: {
-      layout: blank
-    }
   },
-  {
-    path: "/test_col",
-    name: "test_col",
-    component: () => import('../views/test_col.vue'),
-    meta: {
-      layout: blank
-    }
-  }
 ]
 
 const router = createRouter({

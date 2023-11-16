@@ -2,7 +2,7 @@
 
 import { useCollection } from "../stores/collection";
 import { updateField } from "../composables/firestore/updateField";
-import { ref, watchEffect, onMounted } from "vue";
+
 const col = useCollection();
 
 // onMounted(() => {
@@ -21,7 +21,7 @@ updateField()
 </script>
 
 <template>
-    <div class="txt_2xl">this is test-col</div>
+    <div class="font-bold txt_2xl">this is test-col</div>
     <div v-for="art in col.artwork" :key="art.index">
         <div class="text-right">{{ art.index }}</div>
         <div class="text-right">{{ art.title }}</div>

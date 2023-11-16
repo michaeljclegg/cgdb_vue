@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { defineComponent, onMounted, ref, watch } from "vue";
-// import artworks from "@/components/artworks.vue";
+import artworks from "@/components/artworks.vue";
 // import useLowerCase from "@/composables/firestore/useLowerCase";
-import getCollection from "@/composables/firestore/getCollection";
+import getCollection from "@/composablwes/firestore/getCollection";
 
 // const changeLowerCase = useLowerCase();
 const error = ref("");
@@ -17,7 +17,7 @@ onMounted(() => {
 // to filter result set.
 const getColl = () => {
   try {
-    const { documents } = getCollection("artworks_cg", "");
+    const { documents } = getCollection("artworks_cg", "NEW YORK");
     watch(documents, (documents, pre_documents) => {
       artwork.value = documents;
       // console.log("artwork: ", artwork);
@@ -36,7 +36,7 @@ const getColl = () => {
   <div v-for="art in artwork" :key="art.index">
     <!-- <div class="grid grid-cols-[1fr_9fr_2fr] gap-4"> -->
     <div
-      class="grid grid-cols-[minmax(50px,_1fr)_minmax(500px,_7fr)_minmax(100px,_2fr)_minmax(100px,_2fr)] gap-4"
+      class="grid grid-cols-[minmax(50px,_1fr)_minmax(250px,_7fr)_minmax(100px,_2fr)_minmax(100px,_2fr)] gap-4"
     >
       <div class="text-right">{{ art.index }}</div>
       <div class="text-left">{{ art.title.toLowerCase() }}</div>
