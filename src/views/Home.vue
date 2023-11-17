@@ -25,14 +25,14 @@ getDocs(colRef)
 
 <template>
   <Nav/>
-  <div class="font-bold text-gray-600 text-1xl">document count:{{ cgDocs }}</div>
-  <div class="grid h-screen grid-cols-11 grid-rows-6 mx-6">
+  <div class="grid h-screen grid-cols-12 grid-rows-6 mx-6">
     <div
-      class="self-end col-start-6 row-start-2 mb-4 text-4xl text-red-800 justify-self-center"
+    class=" col-start-6 col-end-8 row-start-2 mb-4 text-4xl text-red-300 justify-self-center"
     >
-      home
-
-    </div>
+    CLEGG & GUTTMANN ARTWORKS
+    
+    <div class="mt-16 font-bold text-gray-600 text-1xl">document count:{{ cgDocs }}</div>
+  </div>
     
   
   </div>
