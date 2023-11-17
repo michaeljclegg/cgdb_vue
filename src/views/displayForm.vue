@@ -31,9 +31,9 @@ onMounted(() => {
 const artworkList = ref([]);
 artworkList.value = col.artwork;
 // console.log(artworkList.value);
-const currentArtwork = ref({});
+// const currentArtwork = ref({});
 const currentIndex = ref(0);
-let currentRecord = ref();
+let currentRecord = ref(0);
 
 watch(currentIndex, (newIndex) => {
   currentRecord.value = artworkList.value[newIndex];
@@ -75,7 +75,7 @@ const navigateToHome = () => {
 </script>
 
 <template>
-  <div class="mb-4 flex flex-row items-center justify-center">
+  <div class="flex flex-row items-center justify-center mb-4">
     <button
       v-for="(_, tab) in tabs"
       :key="tab"
@@ -102,16 +102,16 @@ const navigateToHome = () => {
       ></component>
       <!-- //! pagination (out of body)-->
       <nav aria-label="Page navigation example">
-        <ul class="mt-2 inline-flex -space-x-px">
+        <ul class="inline-flex mt-2 -space-x-px">
           <li>
             <a
               href="#"
               @click="previousRecord"
-              class="ms-0 flex h-10 items-center justify-center rounded-s-lg border border-e-0 border-gray-300 bg-white px-4 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 ms-0 rounded-s-lg border-e-0 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               <span class="sr-only">Previous</span>
               <svg
-                class="h-3 w-3 rtl:rotate-180"
+                class="w-3 h-3 rtl:rotate-180"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -132,7 +132,7 @@ const navigateToHome = () => {
             <a
               href="#"
               @click="firstRecord"
-              class="flex h-10 items-center justify-center border border-gray-300 bg-white px-4 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >First</a
             >
           </li>
@@ -141,7 +141,7 @@ const navigateToHome = () => {
               href="#"
               @click="navigateToHome"
               aria-current="page"
-              class="z-10 flex h-10 items-center justify-center border border-blue-300 bg-blue-50 px-4 leading-tight text-blue-600 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+              class="z-10 flex items-center justify-center h-10 px-4 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
               >X</a
             >
           </li>
@@ -149,7 +149,7 @@ const navigateToHome = () => {
             <a
               href="#"
               @click="lastRecord"
-              class="flex h-10 items-center justify-center border border-gray-300 bg-white px-4 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >Last</a
             >
           </li>
@@ -158,11 +158,11 @@ const navigateToHome = () => {
             <a
               href="#"
               @click="nextRecord"
-              class="flex h-10 items-center justify-center rounded-e-lg border border-gray-300 bg-white px-4 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               <span class="sr-only">Next</span>
               <svg
-                class="h-3 w-3 rtl:rotate-180"
+                class="w-3 h-3 rtl:rotate-180"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
